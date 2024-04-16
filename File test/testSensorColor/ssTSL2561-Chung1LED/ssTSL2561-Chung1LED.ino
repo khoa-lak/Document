@@ -2,14 +2,29 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_TSL2561_U.h>
 
-Adafruit_TSL2561_Unified tsl = Adafruit_TSL2561_Unified(TSL2561_ADDR_HIGH, 12345);
+Adafruit_TSL2561_Unified tsl = Adafruit_TSL2561_Unified(TSL2561_ADDR_FLOAT, 12345);
+//arduino
+//#define LED1 2
+//#define LED2 3
+//#define LED3 4
+//#define LED4 5
+//#define LED5 6
+//#define LED6 7
 
-#define LED1 2
-#define LED2 3
-#define LED3 4
-#define LED4 5
-#define LED5 6
-#define LED6 7
+//stm32
+#define led455  PA0
+#define led500  PA1
+#define led590  PA2
+#define led630  PA3
+#define led680  PA4
+#define led820  PA5
+#define LED1 led455
+#define LED2 led500
+#define LED3 led590
+#define LED4 led630
+#define LED5 led680
+#define LED6 led820
+
 String inputString = "";
 /**************************************************************************/
 /*
@@ -106,7 +121,10 @@ void loop(void)
     //    tetsCB();
     measure();
     inputString = "";
-  }
+  } else if (inputString == "r")
+    readss();
+  else if (inputString == "c")
+    inputString = "";
 
 
 }
@@ -145,6 +163,13 @@ uint32_t data() {
   sensors_event_t event;
   tsl.getEvent(&event);
   return event.light;
+}
+void readss() {
+  delay(500);
+  sensors_event_t event;
+  tsl.getEvent(&event);
+  Serial.println("gia tri la: " + String(event.light));
+  return ;
 }
 void serialEvent() {
   inputString = "";
