@@ -1,0 +1,15 @@
+c:\users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\bin\Debug\modbusRTU.exe.config
+C:\Users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\bin\Debug\modbusRTU.exe
+C:\Users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\bin\Debug\modbusRTU.pdb
+C:\Users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\bin\Debug\EasyModbus.dll
+C:\Users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\obj\Debug\modbusRTU.exe
+C:\Users\nicaar\documents\visual studio 2015\Projects\modbusRTU\modbusRTU\obj\Debug\modbusRTU.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\bin\Debug\modbusRTU.exe.config
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\bin\Debug\modbusRTU.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\bin\Debug\modbusRTU.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\bin\Debug\EasyModbus.dll
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\obj\Debug\modbusRTU.csprojAssemblyReference.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\obj\Debug\modbusRTU.csproj.CoreCompileInputs.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\obj\Debug\modbusRTU.csproj.CopyComplete
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\obj\Debug\modbusRTU.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\modbusRTU-master\MODBUS_RTU\modbusRTU\obj\Debug\modbusRTU.pdb

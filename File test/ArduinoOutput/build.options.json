@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "..\\..\\..,..\\..\\..",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "STMicroelectronics:stm32:GenF1:pnum=BLUEPILL_F103C8,upload_method=dfuoMethod,xserial=generic,usb=CDCgen,xusb=FS,opt=osstd,rtlib=nano",
+  "hardwareFolders": "C:\\Users\\lkhoa\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Users\\lkhoa\\OneDrive\\Documents\\Arduino\\libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "C:\\Users\\lkhoa\\OneDrive\\Desktop\\Project\\File test\\test_BlinkLed"
+}

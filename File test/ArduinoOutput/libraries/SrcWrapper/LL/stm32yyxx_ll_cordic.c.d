@@ -1,0 +1,2 @@
+C:\Users\lkhoa\OneDrive\Desktop\Project\File\ test\ArduinoOutput\libraries\SrcWrapper\LL\stm32yyxx_ll_cordic.c.o: \
+ C:\Users\lkhoa\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.0.0\libraries\SrcWrapper\src\LL\stm32yyxx_ll_cordic.c

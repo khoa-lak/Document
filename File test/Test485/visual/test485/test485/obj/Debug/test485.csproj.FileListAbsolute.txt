@@ -1,0 +1,25 @@
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\bin\Debug\test485.exe.config
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\bin\Debug\test485.exe
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\bin\Debug\test485.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\bin\Debug\EasyModbus.dll
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.csprojAssemblyReference.cache
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.Form1.resources
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.Properties.Resources.resources
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.csproj.GenerateResource.cache
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.csproj.CoreCompileInputs.cache
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.csproj.CopyComplete
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.exe
+C:\Users\lkhoa\OneDrive\Desktop\Test485\visual\test485\test485\obj\Debug\test485.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\bin\Debug\test485.exe.config
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\bin\Debug\test485.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\bin\Debug\test485.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.csprojAssemblyReference.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.Form1.resources
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.Properties.Resources.resources
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.csproj.GenerateResource.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.csproj.CoreCompileInputs.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.csproj.CopyComplete
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\obj\Debug\test485.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\bin\Debug\EasyModbus.dll
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\Test485\visual\test485\test485\bin\Debug\ModbusRTU.xml

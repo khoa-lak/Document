@@ -1,0 +1,10 @@
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\bin\Debug\Test232.exe.config
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\bin\Debug\Test232.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\bin\Debug\Test232.pdb
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.csprojAssemblyReference.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.Form1.resources
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.Properties.Resources.resources
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.csproj.GenerateResource.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.csproj.CoreCompileInputs.cache
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.exe
+C:\Users\lkhoa\OneDrive\Desktop\Project\File test\test232\Test232\Test232\obj\Debug\Test232.pdb
