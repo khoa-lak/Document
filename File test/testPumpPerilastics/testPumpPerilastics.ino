@@ -10,203 +10,76 @@
 */
 
 #include "CONFIGPIN.h"
-#include "SENSORCOLOR.h"
-CLASS_CONFIGPIN mainCONFIGPIN;
-CLASS_SSC mainSSC;
-uint16_t pulsePerRound = 3200;
-float mlPerRound = 0.073;
-float mlDropReagent = 0.035;
-float mlWater = 3.0;
-float dropPH = 2.4;
-float dropNH3 = 1.8;
-uint32_t pulseMeasure = 0;
-uint32_t ui32_delayStep = micros();
-uint32_t ui32_delayLed = micros();
+CLASS_CONFIG mainCONFIGPIN;
+uint8_t pinPulse;
+uint32_t pulseWillRun = 0;
+uint32_t delayTimeStepper = micros();
+uint32_t ui32_delayLed = millis();
 String inputString = "";
-void (*runningFunc) ();
 void setup() {
   Serial.begin(9600);
-  mainSSC.SCFunc_Setup();
-  mainCONFIGPIN.Func_ConfigPin();
-  runningFunc = &FuncReset;
-}
-void FuncReset() {
-  digitalWrite(CFPin_EnStepPump, 0);
-  pulseMeasure = 0;
-  return;
-}
-void loop() {
-  BlinkLed();
-  //  tuanhoan();
-  //  if (inputString == "v") {
-  //    vongquay(1);
-  //  }
-  if (inputString == "deba1") {
-    Serial.println("đề ba 1");
-    pulseMeasure = 4000;
-    inputString = "";
-    runningFunc = &FuncReagent;
-  }
-  else if (inputString == "deba2") {
-    Serial.println("đề ba 2");
-    pulseMeasure = 4000;
-    inputString = "";
-    runningFunc = &FuncReagent2;
-  }
-  else if (inputString == "t1") {
-    float mlCurrent = mlDropReagent * dropPH;
-    float amountRound = mlCurrent / mlPerRound;
-    pulseMeasure = amountRound * pulsePerRound;
-    Serial.println("số pulse của thuốc thử 1: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent;
-  }
-  else if (inputString == "t2") {
-    float mlCurrent = mlDropReagent * dropNH3;
-    float amountRound = mlCurrent / mlPerRound;
-    pulseMeasure = amountRound * pulsePerRound;
-    Serial.println("số pulse của thuốc thử 2: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent2;
-  }
-  else if (inputString == "outt1") {
-    float mlCurrent = mlDropReagent * dropPH;
-    float amountRound = mlCurrent / mlPerRound;
-    pulseMeasure = (amountRound * pulsePerRound)  + 1000;
-    Serial.println("số pulse của out thuốc thử 1: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent2;
-  }
-  else if (inputString == "outt2") {
-    float mlCurrent = mlDropReagent * dropPH;
-    float amountRound = mlCurrent / mlPerRound;
-    pulseMeasure = (amountRound * pulsePerRound)  + 1000;
-    Serial.println("số pulse của out thuốc thử 2: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent;
-  }
-  else if (inputString == "water1") {
-    float amountRound = mlWater / mlPerRound;
-    pulseMeasure = amountRound * pulsePerRound;
-    Serial.println("số pulse của water 1: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent;
-  }
-  else if (inputString == "water2") {
-    float amountRound = mlWater / mlPerRound;
-    pulseMeasure = amountRound * pulsePerRound;
-    Serial.println("số pulse của water 2: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent2;
-  }
-  else if (inputString == "outwater1") {
-    float amountRound = mlWater / mlPerRound;
-    pulseMeasure = (amountRound * pulsePerRound) + 1000;
-    Serial.println("số pulse của out water 1: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent2;
-  }
-  else if (inputString == "outwater2") {
-    float amountRound = mlWater / mlPerRound;
-    pulseMeasure = (amountRound * pulsePerRound) + 1000;
-    Serial.println("số pulse của out water 2: " + String(pulseMeasure));
-    inputString = "";
-    runningFunc = &FuncReagent;
-  }
-  else if (inputString == "mix1") {
-    Serial.println("Trộn thuốc 1");
-    pumpmix(0);
-    inputString = "";
-  }
-  else if (inputString == "mix2") {
-    Serial.println("Trộn thuốc 2");
-    pumpmix(1);
-    inputString = "";
-  }
-  else if (inputString == "rua1") {
-    Serial.println("rửa 1");
-    pumpclean(0);
-    inputString = "";
-  }
-  else if (inputString == "rua2") {
-    Serial.println("rửa 2");
-    pumpclean(1);
-    inputString = "";
-  }
-  else if (inputString == "m1" || inputString == "m2" || inputString == "m3") {
-    Serial.println("Đo cảm biến");
-    Func_Color();
-    inputString = "";
-  }
-  else if (inputString == "x") {
-    Serial.println("cancel");
-    inputString = "";
-    runningFunc = &FuncReset;
-  }
-  else if (inputString == "t" || inputString == "n") {
-    tuanhoan();
-    return;
-  } else if (inputString == "out") {
-    Serial.println("bơm xả");
-    pumpout();
-    inputString = "";
-  }
-  runningFunc();
+  mainCONFIGPIN.FUNC_CONFIGPIN();
 
 }
-void FuncReagent() {
-  digitalWrite(CFPin_EnStepPump, 1);
-  if ( Func_RunStep(0, 100))
-    pulseMeasure --;
-  if (pulseMeasure  <= 0) {
-    runningFunc = &FuncReset;
-    Serial.println("done");
+void loop() {
+  if (inputString == "clear") {
+    inputString = "";
+    mainCONFIGPIN.FUNC_CONFIGPIN();
   }
-}
-void FuncReagent2() {
-  digitalWrite(CFPin_EnStepPump, 1);
-  if (Func_RunStep(1, 100))
-    pulseMeasure --;
-  if (pulseMeasure  <= 0) {
-    runningFunc = &FuncReset;
-    Serial.println("done");
+  else if (inputString.indexOf("pump1-") >= 0) {
+    float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
+    uint16_t pulse1ml = (inputString.charAt(10) - '0') * 10000 + (inputString.charAt(11) - '0') * 1000 + (inputString.charAt(12) - '0') * 100 + (inputString.charAt(13) - '0') * 10 + (inputString.charAt(14) - '0');
+    uint8_t dir = (inputString.charAt(16) - '0');
+    pinPulse = pulsePerisRe;
+    uint32_t sumpulse = pulse1ml * ml;
+    if (PUMP_STEPPER( sumpulse, dir)) {
+      Serial.println("bom xong, ml: " + String(ml) + " " + String(pulse1ml));
+      inputString = "";
+    }
   }
+  else if (inputString.indexOf("pump2-") >= 0) {
+    float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
+    uint16_t pulse1ml = (inputString.charAt(10) - '0') * 10000 + (inputString.charAt(11) - '0') * 1000 + (inputString.charAt(12) - '0') * 100 + (inputString.charAt(13) - '0') * 10 + (inputString.charAt(14) - '0');
+    uint8_t dir = (inputString.charAt(16) - '0');
+    pinPulse = pulsePerisWa;
+    uint32_t sumpulse = pulse1ml * ml;
+    if (PUMP_STEPPER( sumpulse, dir)) {
+      Serial.println("bom xong, ml: " + String(ml) + " " + String(pulse1ml));
+      inputString = "";
+    }
+  }
+  BlinkLed();
 }
-bool Func_RunStep(uint8_t dir, uint16_t spe) {
-  uint8_t state = digitalRead(CFPin_PulseStep);
-  digitalWrite(CFPin_DirStep, dir);
-  if (abs(int64_t(micros() - ui32_delayStep)) > spe) {
-    digitalWrite(CFPin_PulseStep, !state);
-    ui32_delayStep = micros();
+bool STEPPER(uint16_t spe) {
+  //uint16_t spe = 200;
+  uint8_t state = digitalRead(pinPulse);
+  if (micros() - delayTimeStepper > spe) {
+    digitalWrite(pinPulse, !state);
+    pulseWillRun --;
+    delayTimeStepper = micros();
+
+  }
+  if (pulseWillRun == 0) {
+    pulseWillRun = 0;
     return 1;
   }
   return 0;
 }
-void Func_Color() {
-  if (inputString == "m2" || inputString == "m3" ) {
-    digitalWrite(CFPin_Stir, 0);
-    delay(10000);
-    digitalWrite(CFPin_Stir, 1);
-    if (inputString == "m3")
-      return;
-  }
-  digitalWrite(CFPin_LedSensor, 0);
-  delay(500);
-  float RGBme[4] = {0};
-  uint8_t solan = 5;
-  mainSSC.SCFunc_Running(RGBme, 1);
-  digitalWrite(CFPin_LedSensor, 1);
-}
-void serialEvent() {
-  inputString = "";
-  while (Serial.available()) {
-    char inChar = (char)Serial.read();
-    if (inChar != '\n' && inChar != ' ' && inChar != '\r') {
-      inputString += inChar;
 
-    }
+bool PUMP_STEPPER(uint32_t pulse, uint8_t dir) {
+  uint16_t spe = 150;
+  if (pulseWillRun <= 0) {
+    pulseWillRun = pulse;
+    Serial.println("pulse la: " + String(pulseWillRun) + " bom theo chieu: " + String(dir));
+    digitalWrite(enPeris , 1);
   }
-  Serial.println(inputString);
+  digitalWrite(dirPeris , !dir);
+  bool done = STEPPER(spe);
+  if (done) {
+    digitalWrite(enPeris , 0);
+    pulseWillRun = 0;
+  }
+  return done;
 }
 void BlinkLed() {
   uint8_t state13 = digitalRead(PC13);
@@ -215,83 +88,13 @@ void BlinkLed() {
     ui32_delayLed = millis();
   }
 }
-void pumpmix(uint8_t dir) {
-  digitalWrite(CFPin_EnStepPump, 1);
-  digitalWrite(CFPin_DirStep, dir);
-  for (uint32_t i = 0 ; i < 25000 ; i ++) { //68.5
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(100);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(100);
-  }
-  delay(2000);
-  digitalWrite(CFPin_DirStep, !dir);
-  for (uint32_t i = 0 ; i < 26500 ; i ++) { //68.5
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(100);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(100);
-  }
-  digitalWrite(CFPin_EnStepPump, 0);
-}
-void pumpout() {
-  digitalWrite(CFPin_PumpInTube, 0);
-  delay(10000);
-  digitalWrite(CFPin_PumpInTube, 1);
-}
-void pumpclean(uint8_t dir) {
-  digitalWrite(CFPin_EnStepPump, 1);
-  digitalWrite(CFPin_DirStep, dir);
-  for (uint32_t i = 0 ; i < 30000 ; i ++) { //68.5
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(100);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(100);
-  }
-  delay(5000);
-  digitalWrite(CFPin_DirStep, !dir);
-  for (uint32_t i = 0 ; i < 32000 ; i ++) { //68.5
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(100);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(100);
-  }
-  digitalWrite(CFPin_EnStepPump, 0);
-}
-
-void vongquay(uint8_t vong) {
-  digitalWrite(CFPin_EnStepPump, 1);
-  digitalWrite(CFPin_DirStep, 0);
-  Serial.println(millis());
-  //  for (uint16_t j = 9 ; j < 4*69; j++) {
-  for (uint32_t i = 0 ; i < 800 ; i ++) { //68.5
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(100);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(100);
-  }
-  //    delay(500);
-  //  }
-  Serial.println(millis());
-  digitalWrite(CFPin_EnStepPump, 0);
+void serialEvent() {
   inputString = "";
-}
-void tuanhoan() {
-  if (inputString == "t") {
-    digitalWrite(CFPin_EnStepPump, 1);
-    digitalWrite(CFPin_DirStep, 0);
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(50);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(50);
+  while (Serial.available()) {
+    char inChar = (char)Serial.read();
+    if (inChar != '\n' && inChar != ' ' && inChar != '\r') {
+      inputString += inChar;
+    }
   }
-  else if (inputString == "n") {
-    digitalWrite(CFPin_EnStepPump, 1);
-    digitalWrite(CFPin_DirStep, 1);
-    digitalWrite(CFPin_PulseStep, 0);
-    delayMicroseconds(50);
-    digitalWrite(CFPin_PulseStep, 1);
-    delayMicroseconds(50);
-  } else
-    digitalWrite(CFPin_EnStepPump, 0);
+  Serial.println(inputString);
 }
