@@ -13,6 +13,7 @@
 CLASS_CONFIG mainCONFIGPIN;
 uint8_t pinPulse;
 uint32_t pulseWillRun = 0;
+uint32_t pulseLinear = 0;
 uint32_t delayTimeStepper = micros();
 uint32_t ui32_delayLed = millis();
 String inputString = "";
@@ -22,14 +23,15 @@ void setup() {
 
 }
 void loop() {
+
   if (inputString == "clear") {
     inputString = "";
     mainCONFIGPIN.FUNC_CONFIGPIN();
   }
   else if (inputString.indexOf("pump1-") >= 0) {
     float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
-    uint16_t pulse1ml = (inputString.charAt(10) - '0') * 10000 + (inputString.charAt(11) - '0') * 1000 + (inputString.charAt(12) - '0') * 100 + (inputString.charAt(13) - '0') * 10 + (inputString.charAt(14) - '0');
-    uint8_t dir = (inputString.charAt(16) - '0');
+    uint32_t pulse1ml = (inputString.charAt(10) - '0') * 100000 + (inputString.charAt(11) - '0') * 10000 + (inputString.charAt(12) - '0') * 1000 + (inputString.charAt(13) - '0') * 100 + (inputString.charAt(14) - '0') * 10 + (inputString.charAt(15) - '0');
+    uint8_t dir = (inputString.charAt(17) - '0');
     pinPulse = pulsePerisRe;
     uint32_t sumpulse = pulse1ml * ml;
     if (PUMP_STEPPER( sumpulse, dir)) {
@@ -39,8 +41,8 @@ void loop() {
   }
   else if (inputString.indexOf("pump2-") >= 0) {
     float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
-    uint16_t pulse1ml = (inputString.charAt(10) - '0') * 10000 + (inputString.charAt(11) - '0') * 1000 + (inputString.charAt(12) - '0') * 100 + (inputString.charAt(13) - '0') * 10 + (inputString.charAt(14) - '0');
-    uint8_t dir = (inputString.charAt(16) - '0');
+    uint32_t pulse1ml = (inputString.charAt(10) - '0') * 100000 + (inputString.charAt(11) - '0') * 10000 + (inputString.charAt(12) - '0') * 1000 + (inputString.charAt(13) - '0') * 100 + (inputString.charAt(14) - '0') * 10 + (inputString.charAt(15) - '0');
+    uint8_t dir = (inputString.charAt(17) - '0');
     pinPulse = pulsePerisWa;
     uint32_t sumpulse = pulse1ml * ml;
     if (PUMP_STEPPER( sumpulse, dir)) {
@@ -48,11 +50,33 @@ void loop() {
       inputString = "";
     }
   }
+  else if (inputString.indexOf("line1-") >= 0) {
+    float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
+    uint32_t pulse1ml = (inputString.charAt(10) - '0') * 100000 + (inputString.charAt(11) - '0') * 10000 + (inputString.charAt(12) - '0') * 1000 + (inputString.charAt(13) - '0') * 100 + (inputString.charAt(14) - '0') * 10 + (inputString.charAt(15) - '0');
+    uint8_t dir = (inputString.charAt(17) - '0');
+    pinPulse = pulseLiRe;
+    uint32_t sumpulse = pulse1ml * ml;
+    if (LINEAR_STEPPER( sumpulse, dir)) {
+      Serial.println("chay xong, ml: " + String(ml) + " " + String(pulse1ml));
+      inputString = "";
+    }
+  }
+  else if (inputString.indexOf("line2-") >= 0) {
+    float ml = (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') + (inputString.charAt(8) - '0') / 10.00;
+    uint32_t pulse1ml = (inputString.charAt(10) - '0') * 100000 + (inputString.charAt(11) - '0') * 10000 + (inputString.charAt(12) - '0') * 1000 + (inputString.charAt(13) - '0') * 100 + (inputString.charAt(14) - '0') * 10 + (inputString.charAt(15) - '0');
+    uint8_t dir = (inputString.charAt(17) - '0');
+    pinPulse = pulseLiWa;
+    uint32_t sumpulse = pulse1ml * ml;
+    if (LINEAR_STEPPER( sumpulse, dir)) {
+      Serial.println("chay xong, ml: " + String(ml) + " " + String(pulse1ml));
+      inputString = "";
+    }
+  }
   BlinkLed();
 }
 bool STEPPER(uint16_t spe) {
   //uint16_t spe = 200;
-  uint8_t state = digitalRead(pinPulse);
+  uint8_t state = digitalRead(pinPulse);  
   if (micros() - delayTimeStepper > spe) {
     digitalWrite(pinPulse, !state);
     pulseWillRun --;
@@ -67,7 +91,7 @@ bool STEPPER(uint16_t spe) {
 }
 
 bool PUMP_STEPPER(uint32_t pulse, uint8_t dir) {
-  uint16_t spe = 150;
+  uint16_t spe = 250;
   if (pulseWillRun <= 0) {
     pulseWillRun = pulse;
     Serial.println("pulse la: " + String(pulseWillRun) + " bom theo chieu: " + String(dir));
@@ -81,6 +105,38 @@ bool PUMP_STEPPER(uint32_t pulse, uint8_t dir) {
   }
   return done;
 }
+bool LI_STEPPER(uint16_t spe) {
+  //uint16_t spe = 200;
+  uint8_t state = digitalRead(pinPulse);
+  if (micros() - delayTimeStepper > spe) {
+    digitalWrite(pinPulse, !state);
+    pulseLinear --;
+    delayTimeStepper = micros();
+
+  }
+  if (pulseLinear == 0) {
+    pulseLinear = 0;
+    return 1;
+  }
+  return 0;
+}
+
+bool LINEAR_STEPPER(uint32_t pulse, uint8_t dir) {
+  uint16_t spe = 100;
+  if (pulseLinear <= 0) {
+    pulseLinear = pulse;
+    Serial.println("pulse la: " + String(pulseLinear) + " linear theo chieu: " + String(dir));
+    digitalWrite(enLinear , 1);
+  }
+  digitalWrite(dirLinear , !dir);
+  bool done = LI_STEPPER(spe);
+  if (done) {
+    digitalWrite(enLinear  , 0);
+    pulseLinear = 0;
+  }
+  return done;
+}
+
 void BlinkLed() {
   uint8_t state13 = digitalRead(PC13);
   if (millis() - ui32_delayLed > 1000) {
