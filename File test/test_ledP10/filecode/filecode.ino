@@ -13,18 +13,21 @@ unsigned char Buffer_display[3][16][4];
 #define G_MASK      0x02
 #define B_MASK      0x04
 
-#define R1 PA5
-#define R2 PA6
-#define B1 PA4
-#define B2 PA7
-#define G1 PA3
-#define G2 PA1
-#define A PC4
-#define B PC3
-#define C PC5
-#define OE PB1
-#define CLK PB0
-#define LAT PC1
+#define R1 2
+#define G1 3
+#define B1 4
+#define R2 5
+#define G2 6
+#define B2 7
+#define CLK 8
+#define OE 9
+#define LAT 10
+#define A A0
+#define B A1
+#define C A2
+
+
+
 
 
 
@@ -37,10 +40,10 @@ void loop() {
   //ngat_quet_led();
   digitalWrite(LAT, LOW);
   hang(1);
-  
+
   chuyen(1, 1, 1, 1, 1, 1);
   digitalWrite(LAT, 1);
-  
+
 }
 
 void chuyen(uint8_t byte_r1, uint8_t  byte_g1, uint8_t  byte_b1, uint8_t  byte_r2, uint8_t  byte_g2, uint8_t  byte_b2)
