@@ -91,7 +91,7 @@ bool STEPPER(uint16_t spe) {
 }
 
 bool PUMP_STEPPER(uint32_t pulse, uint8_t dir) {
-  uint16_t spe = 250;
+  uint16_t spe = 800;
   if (pulseWillRun <= 0) {
     pulseWillRun = pulse;
     Serial.println("pulse la: " + String(pulseWillRun) + " bom theo chieu: " + String(dir));
