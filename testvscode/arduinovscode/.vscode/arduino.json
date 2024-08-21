@@ -1,0 +1,7 @@
+{
+    "sketch": "tesst.ino",
+    "output": "build",
+    "board": "STMicroelectronics:stm32:GenF1",
+    "port": "COM17",
+    "configuration": "pnum=BLUEBUTTON_F103RCT,upload_method=dfu2Method,xserial=generic,usb=CDCgen,xusb=FS,opt=osstd,dbg=none,rtlib=nano"
+}

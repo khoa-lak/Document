@@ -1,0 +1,12 @@
+{
+  "additionalFiles": "",
+  "builtInLibrariesFolders": "C:\\Program Files (x86)\\Arduino\\libraries",
+  "builtInToolsFolders": "C:\\Program Files (x86)\\Arduino\\tools-builder,C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr,C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "build.path=c:\\Users\\KhoaAnh\\Desktop\\github\\Document\\testvscode\\arduinovscode\\build,build.warn_data_percentage=75,runtime.tools.CMSIS.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\CMSIS\\5.7.0,runtime.tools.CMSIS-5.7.0.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\CMSIS\\5.7.0,runtime.tools.xpack-openocd.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-openocd\\0.12.0-1,runtime.tools.xpack-openocd-0.12.0-1.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-openocd\\0.12.0-1,runtime.tools.STM32Tools.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\STM32Tools\\2.2.0,runtime.tools.STM32Tools-2.2.0.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\STM32Tools\\2.2.0,runtime.tools.xpack-arm-none-eabi-gcc.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-arm-none-eabi-gcc\\12.2.1-1.2,runtime.tools.xpack-arm-none-eabi-gcc-12.2.1-1.2.path=C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-arm-none-eabi-gcc\\12.2.1-1.2",
+  "fqbn": "STMicroelectronics:stm32:GenF1:pnum=BLUEBUTTON_F103RCT,upload_method=dfu2Method,xserial=generic,usb=CDCgen,xusb=FS,opt=osstd,dbg=none,rtlib=nano",
+  "hardwareFolders": "C:\\Program Files (x86)\\Arduino\\hardware,C:\\Users\\KhoaAnh\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Users\\KhoaAnh\\Documents\\Arduino\\libraries",
+  "runtime.ide.version": "10819",
+  "sketchLocation": "c:\\Users\\KhoaAnh\\Desktop\\github\\Document\\testvscode\\arduinovscode\\tesst.ino"
+}
