@@ -39,34 +39,34 @@ void CLASS_CONFIG::FUNC_CONFIGPIN() {
   pinMode(pulsePerisRe, OUTPUT);
   pinMode(pulsePerisWa, OUTPUT);
 
-  digitalWrite(pumpIN, 0);
-  digitalWrite(pumpOUT, 0);
-  digitalWrite(valveDir, 0); //in
-  digitalWrite(valvePond,  LOW); //
-  digitalWrite(thermCooler,  LOW);
-  digitalWrite(pumpCooling, 0);
-  digitalWrite(pumpVial, 0);
-  digitalWrite(pumpDis, 0);
-  digitalWrite(motorMix, LOW);
-  digitalWrite(fan, LOW);
-  //digitalWrite(lampRed, LOW);
-  digitalWrite(stir , LOW);
-  digitalWrite(pinPos, LOW);
-  digitalWrite(horn, LOW);
-  digitalWrite(outnone, LOW);
-  digitalWrite(en485, LOW);
+  digitalWrite(pumpIN, 1);
+  digitalWrite(pumpOUT, 1);
+  digitalWrite(valveDir, 1); //in
+  digitalWrite(valvePond,  1); //
+  digitalWrite(thermCooler,  1);
+  digitalWrite(pumpCooling, 1);
+  digitalWrite(pumpVial, 1);
+  digitalWrite(pumpDis, 1);
+  digitalWrite(motorMix, 1);
+  digitalWrite(fan, 1);
+  //digitalWrite(lampRed, 1);
+  digitalWrite(stir , 1);
+  digitalWrite(pinPos, 1);
+  digitalWrite(horn, 1);
+  digitalWrite(outnone, 1);
+  digitalWrite(en485, 1);
   digitalWrite(enUART, 1);
 
-  digitalWrite(enRot, LOW);
-  digitalWrite(dirRot, LOW);
-  digitalWrite(pulseRot, LOW);
-  digitalWrite(enLinear, LOW);
-  digitalWrite(dirLinear, LOW);
-  digitalWrite(pulseLiRe, LOW);
-  digitalWrite(pulseLiWa, LOW);
-  digitalWrite(enPeris, LOW);
-  digitalWrite(dirPeris, LOW);
-  digitalWrite(pulsePerisRe, LOW);
-  digitalWrite(pulsePerisWa, LOW);
+  digitalWrite(enRot, 1);
+  digitalWrite(dirRot, 1);
+  digitalWrite(pulseRot, 1);
+  digitalWrite(enLinear, 1);
+  digitalWrite(dirLinear, 1);
+  digitalWrite(pulseLiRe, 1);
+  digitalWrite(pulseLiWa, 1);
+  digitalWrite(enPeris, 1);
+  digitalWrite(dirPeris, 1);
+  digitalWrite(pulsePerisRe, 1);
+  digitalWrite(pulsePerisWa, 1);
 
 }

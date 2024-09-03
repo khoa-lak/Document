@@ -48,15 +48,14 @@
 #define enRot         PC10
 #define dirRot        PC11
 #define pulseRot      PC12
-#define enPeris       PD2
-#define dirPeris      PB3  //1:dis, 2: pump, 
-#define pulsePerisRe  PB4  //1 ml: 18518 pulse => 1drop(0.035ml) = 650 pulse
-#define pulsePerisWa  PB5  //1 ml: 12500 
+#define enPeris       PC9
+#define dirPeris      PA15  //1:dis, 2: pump, 
+#define pulsePerisRe  PC10  //1 ml: 18518 pulse => 1drop(0.035ml) = 650 pulse
+#define pulsePerisWa  PC11  //1 ml: 12500 
 #define enLinear      PB6
 #define dirLinear     PB7  //1: up, 0: down
 #define pulseLiRe     PB8
 #define pulseLiWa     PB9
-
 
 
 

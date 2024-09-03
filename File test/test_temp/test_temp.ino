@@ -8,7 +8,7 @@
 // https://github.com/milesburton/Arduino-Temperature-Control-Library
 
 #define LED PC13
-OneWire  ds(PB8);  // on pin 10 (a 4.7K resistor is necessary)
+OneWire  ds(PA7);  // on pin 10 (a 4.7K resistor is necessary)
 float f_temp;
 void setup(void) {
   pinMode(LED, OUTPUT);
@@ -17,8 +17,9 @@ void setup(void) {
 }
 
 void loop(void) {
-  Blink_Led();
+ // Blink_Led();
   Func_Temp();
+  //Serial.println("lalalla");
 }
 
 void Blink_Led() {
