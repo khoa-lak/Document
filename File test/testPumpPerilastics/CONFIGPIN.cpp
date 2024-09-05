@@ -57,14 +57,14 @@ void CLASS_CONFIG::FUNC_CONFIGPIN() {
   digitalWrite(en485, 1);
   digitalWrite(enUART, 1);
 
-  digitalWrite(enRot, 1);
+  digitalWrite(enRot, 0);
   digitalWrite(dirRot, 1);
   digitalWrite(pulseRot, 1);
-  digitalWrite(enLinear, 1);
+  digitalWrite(enLinear, 0);
   digitalWrite(dirLinear, 1);
   digitalWrite(pulseLiRe, 1);
   digitalWrite(pulseLiWa, 1);
-  digitalWrite(enPeris, 1);
+  digitalWrite(enPeris, 0);
   digitalWrite(dirPeris, 1);
   digitalWrite(pulsePerisRe, 1);
   digitalWrite(pulsePerisWa, 1);

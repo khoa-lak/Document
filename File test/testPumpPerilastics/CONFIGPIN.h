@@ -45,17 +45,17 @@
 #define rx485     PA3
 #define enUART     PA8
 //define step
-#define enRot         PC10
-#define dirRot        PC11
-#define pulseRot      PC12
+#define enRot         PC5
+#define dirRot        PB0
+#define pulseRot      PB1
 #define enPeris       PC9
 #define dirPeris      PA15  //1:dis, 2: pump, 
 #define pulsePerisRe  PC10  //1 ml: 18518 pulse => 1drop(0.035ml) = 650 pulse
 #define pulsePerisWa  PC11  //1 ml: 12500 
-#define enLinear      PB6
-#define dirLinear     PB7  //1: up, 0: down
-#define pulseLiRe     PB8
-#define pulseLiWa     PB9
+#define enLinear      PB10
+#define dirLinear     PC6  //1: up, 0: down
+#define pulseLiRe     PC7
+#define pulseLiWa     PC8
 
 
 
