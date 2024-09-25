@@ -30,7 +30,7 @@
 #define thermCooler PB10
 #define pumpCooling PB11
 #define pumpVial    PB12
-#define pumpDis     PB13
+#define pumpDis     PC3
 #define motorMix    PB14
 #define fan         PB15
 #define stir       PC6

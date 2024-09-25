@@ -72,11 +72,19 @@ void loop() {
       inputString = "";
     }
   }
+  else if (inputString.indexOf("dc-") >= 0) {
+    uint16_t tim = (inputString.charAt(3) - '0') * 10000 + (inputString.charAt(4) - '0') * 1000 + (inputString.charAt(5) - '0') * 100 + (inputString.charAt(6) - '0') * 10 + (inputString.charAt(7) - '0') * 1;
+    digitalWrite(pumpDis, 0);
+    delay(tim); //700 -> 0.51ml
+    digitalWrite(pumpDis, 1);
+    Serial.println("xong");
+    inputString = "";
+  }
   BlinkLed();
 }
 bool STEPPER(uint16_t spe) {
   //uint16_t spe = 200;
-  uint8_t state = digitalRead(pinPulse);  
+  uint8_t state = digitalRead(pinPulse);
   if (micros() - delayTimeStepper > spe) {
     digitalWrite(pinPulse, !state);
     pulseWillRun --;
