@@ -73,32 +73,22 @@ void loop() {
   // byte request[] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x03, 0x05, 0xCB}; //PHsuprema
   // byte request[] = {0x04, 0x03, 0x00, 0x00, 0x00, 0x04, 0x44, 0x5c}; //SanDaxi
   // byte request[] = {0x03, 0x03, 0x20, 0x00, 0x00, 0x06, 0xCF, 0xEA}; //Disen
-  if (inputString == "gui") {
-    byte request[] = {0x05, 0x03, 0x29, 0x00, 0x00, 0x06, 0xCF, 0x04}; //Disen
-    char response[30]; // Dữ liệu nhận về
-    digitalWrite(DE, 1);
-    RS485.write(request, sizeof(request)); // Gửi dữ liệu đi
-
-    delay(1); // Đợi cho cảm biến xử lý và trả về dữ liệu
-
-    //  int i = 0;
-    digitalWrite(DE, 0);
-    inputString = "";
-    //  while (RS485.available()) {
-    //    response[i++] = RS485.read(); // Nhận dữ liệu từ cảm biến
-    //  }
+  uint8_t request[] = {0x03, 0x03, 0x21, 0x00, 0x00, 0x02, 0xCF, 0xD5};  //01 03 00 00 00 04 44 09
+  uint8_t response[7]; // Dữ liệu nhận về
+  digitalWrite(DE, 1);
+  RS485.write(request, 8); // Gửi dữ liệu đi
+  delay(5); // Đợi cho cảm biến xử lý và trả về dữ liệu
+  digitalWrite(DE, 0);
+  //while (millis() -  tTimeOut < timeout) {
+  RS485.readBytes(response, 7);
+  //}
+  for (int j = 0; j < 7; j++) {
+    
+    Serial.print(response[j], HEX);
+    Serial.print(" ");
   }
-  while (RS485.available()) {
-    Serial.print("Response: ");
-    for (int j = 0; j < 30; j++) {
-      Serial.print(RS485.read());
-      Serial.print(" ");
-    }
-    Serial.println();
-    Serial.println("////// ");
-  }
-  delay(500); // Chờ 1 giây trước khi gửi yêu cầu tiếp theo
-  delay(500); // Chờ 1 giây trước khi gửi yêu cầu tiếp theo
+  Serial.println(" ");
+  delay(2000); // Chờ 1 giây trước khi gửi yêu cầu tiếp theo
 }
 void serialEvent() {
   inputString = "";
