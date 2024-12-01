@@ -1,4 +1,4 @@
- /*
+/*
   Blink
 
   Turns an LED on for one second, then off for one second, repeatedly.
@@ -27,48 +27,62 @@ void setup() {
   Serial.begin(9600);
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(PC13, OUTPUT);
-  pinMode(PA0, OUTPUT);
-  pinMode(PB7, OUTPUT);
-  pinMode(PB8, OUTPUT);
-  pinMode(PB9, OUTPUT);
-  pinMode(PB6, OUTPUT);
-  digitalWrite(PB7, 0);
-  digitalWrite(PB8, 0);
-  digitalWrite(PB9, 0);
+//  pinMode(PA0, OUTPUT);
+//  pinMode(PB7, OUTPUT);
+//  pinMode(PB8, OUTPUT);
+//  pinMode(PB9, OUTPUT);
+//  pinMode(PB6, OUTPUT);
+//  digitalWrite(PB7, 0);
+//  digitalWrite(PB8, 0);
+//  digitalWrite(PB9, 0);
 }
-
+int freeRam(void)
+{
+  extern int __bss_end;
+  extern int *__brkval;
+  int free_memory;
+  if ((int)__brkval == 0) {
+    free_memory = ((int)&free_memory) - ((int)&__bss_end);
+  }
+  else {
+    free_memory = ((int)&free_memory) - ((int)__brkval);
+  }
+  return free_memory;
+}
 // the loop function runs over and over again forever
 void loop() {
+  //Serial.println("in trước: " + String(freeRam));
   BlinkLed();
-// Pump();
+  // Pump();
   Serial.println("232322");
+  //Serial.println("in sau: " + String(freeRam));
 }
 
-void Pump() {
-  digitalWrite(PB6, LOW);
-}
-void ButtonLed() {
-  if (digitalRead(PB8) == 1) {
-    digitalWrite(PC13, HIGH);
-    digitalWrite(PB7, LOW);
-  } else {
-    digitalWrite(PB7, HIGH);
-    digitalWrite(PC13, LOW);
-  }
-  if (digitalRead(PB9) == 1) {
-    digitalWrite(PB6, HIGH);
-    digitalWrite(PA0, HIGH);
-  } else {
-    digitalWrite(PB6, LOW);
-    digitalWrite(PA0, LOW);
-  }
-}
+//void Pump() {
+//  digitalWrite(PB6, LOW);
+//}
+//void ButtonLed() {
+//  if (digitalRead(PB8) == 1) {
+//    digitalWrite(PC13, HIGH);
+//    digitalWrite(PB7, LOW);
+//  } else {
+//    digitalWrite(PB7, HIGH);
+//    digitalWrite(PC13, LOW);
+//  }
+//  if (digitalRead(PB9) == 1) {
+//    digitalWrite(PB6, HIGH);
+//    digitalWrite(PA0, HIGH);
+//  } else {
+//    digitalWrite(PB6, LOW);
+//    digitalWrite(PA0, LOW);
+//  }
+//}
 void BlinkLed() {
   digitalWrite(PC13, HIGH);
- 
+
   delay(100);
- 
+
   digitalWrite(PC13, LOW);
- 
+
   delay(100);                       // wait for a second
 }
