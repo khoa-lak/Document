@@ -1,7 +1,8 @@
 
 #include "ST7565.h"
+//1-CS, 2-RST, 3-A0, 4-SCK, 5-SDA/MOSI, 6-VCC+3V, 7-Gnd, 8-Led-, 9-Led+3V
 // Define ST7565 LCD pin connections
-#define PIN_SCK     PA5   // SCK pin
+#define PIN_SCK     PA5   // SCK pin 
 #define PIN_MOSI    PA7   // MOSI pin
 #define PIN_CS      PA4   // CS pin
 #define PIN_RST     PA3   // RST pin
