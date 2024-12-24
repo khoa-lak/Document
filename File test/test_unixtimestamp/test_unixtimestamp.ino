@@ -111,8 +111,8 @@ void setup() {
 
 
 void loop() {
-  uint32_t tim = 1723458614;
-  char* txt = "24/08/12,17:30:14+07";
+  uint32_t tim =  1741091446;
+  char* txt = "25/12/25,19:30:46+07";
   if (inputString == "unix") {
     Serial.println(unixTime.convertToUnix(txt));
     inputString = "";

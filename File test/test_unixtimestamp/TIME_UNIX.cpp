@@ -1,9 +1,13 @@
 #include "TIME_UNIX.h"
 bool CLASS_TIME_UNIXSTAMP::isLeapYear(uint16_t year) {
-  if ((year % 4 == 0 && year % 100 != 0 ) || (year  % 400 == 0))
+  if ((year % 4 == 0 && year % 100 != 0 ) || (year  % 400 == 0)) {
+    Serial.println("leap year: " + String(year));
     return true;
-  else
+  }
+  else {
+    Serial.println("normal year: " + String(year));
     return false;
+  }
 }
 uint32_t CLASS_TIME_UNIXSTAMP::secondsFromEpoch(uint16_t current_year) {
   uint32_t seconds = 0;
@@ -50,7 +54,7 @@ uint8_t CLASS_TIME_UNIXSTAMP::currentMonth(uint32_t &second_sub_epoch, uint16_t 
 void CLASS_TIME_UNIXSTAMP::getUnixTime(uint32_t epoch, uint8_t &sec, uint8_t &mins, uint8_t &hrs, uint8_t &day, uint8_t &month, uint16_t &year) {
   uint16_t time_zone = gmt * minute * second;
   uint32_t second_day = hour * minute * second;
-  uint32_t second_year = normal_year * second_day;
+  uint32_t second_year = leap_year * second_day;
   epoch += time_zone;
   uint16_t current_year = year_epoch + (epoch / second_year);
   uint32_t second_sub_epoch = epoch - secondsFromEpoch(current_year);
@@ -145,7 +149,7 @@ uint32_t CLASS_TIME_UNIXSTAMP::convertToUnix(char* txt) {
   uint16_t year = 0;
   //Serial.println(txt);
   handleTxtDate(txt, sec, mins, hrs, day, month, year);
-  uint32_t unix = epoch(sec, mins, hrs, day, month, year) - gmt * minute * second;
+  uint32_t unix = epoch(sec, mins, hrs, day, month, year) - (gmt * minute * second);
   return unix;
 }
 char* CLASS_TIME_UNIXSTAMP::convertToDate(char* txt) {
@@ -165,7 +169,7 @@ char* CLASS_TIME_UNIXSTAMP::convertToDate(char* txt) {
   return date(day, month, year);
 }
 char* CLASS_TIME_UNIXSTAMP::convertToDay(uint32_t epoch) {
-  //Serial.println(epoch);
+  Serial.println(epoch);
   uint8_t sec = 0;
   uint8_t mins = 0;
   uint8_t hrs = 0;
@@ -173,6 +177,12 @@ char* CLASS_TIME_UNIXSTAMP::convertToDay(uint32_t epoch) {
   uint8_t month = 0;
   uint16_t year = 0;
   getUnixTime(epoch, sec, mins, hrs, day, month, year);
+  Serial.println(year);
+  Serial.println(month);
+  Serial.println(day);
+  Serial.println(hrs);
+  Serial.println(mins);
+  Serial.println(sec);
   year = year % 100;
   char txtDate[21];
   sprintf(txtDate, "%d/%d/%d,%d:%d:%d+%d", year, month, day, hrs, mins, sec, gmt);
