@@ -65,8 +65,17 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-char *data = "hello world FLASH from ControllerTech \
-			  This is a test to see how many words can we work with";
+char *data = 		":020000040800F2"
+								":1020000070060020892100080B2B0008912A000887"
+								":10201000092B00088B220008672B00080000000035"
+								":1020000070060020892100080B2B0008912A000887"
+								":10201000092B00088B220008672B00080000000035"
+								":1020000070060020892100080B2B0008912A000887"
+								":10201000092B00088B220008672B00080000000035"
+								":1020000070060020892100080B2B0008912A000887"
+								":10201000092B00088B220008672B00080000000035"
+								":1020000070060020892100080B2B0008912A000887"
+								":10201000092B00088B220008672B00080000000035";
 uint32_t data2[] = {0xFFFFFFFF,0x12345678,0x23456789,0x34567890,0x45678901,0x56789012,0x67890123,0x78901234,0x89012345};
 uint32_t Rx_Data[30];
 char string[100];
@@ -136,8 +145,8 @@ int main(void)
 //	FLASH_WritePage(FLASH_USER_START_ADDR, FLASH_USER_END_ADDR, 13245768);
 	//dataRead = FLASH_ReadPage(FLASH_USER_START_ADDR);
 	
-	Flash_Write_Data(0x08004410 , (uint32_t *)data2, 9);
-  Flash_Read_Data(0x08004410 , Rx_Data, 10);
+//	Flash_Write_Data(0x08004410 , (uint32_t *)data2, 9);
+//  Flash_Read_Data(0x08004410 , Rx_Data, 10);
 
 
   int numofwords = (strlen(data)/4)+((strlen(data)%4)!=0);
