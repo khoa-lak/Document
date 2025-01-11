@@ -61,6 +61,9 @@ String inputString;
 //#define DE PA8
 void setup() {
   Serial.begin(9600); // Khởi tạo kết nối Serial với máy tính
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
   //RS485.begin(4800); // Khởi tạo kết nối RS485 với cảm biến
   RS485.begin(9600); // Khởi tạo kết nối RS485 với cảm biến
   pinMode(DE, OUTPUT);
@@ -73,7 +76,8 @@ void loop() {
   // byte request[] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x03, 0x05, 0xCB}; //PHsuprema
   // byte request[] = {0x04, 0x03, 0x00, 0x00, 0x00, 0x04, 0x44, 0x5c}; //SanDaxi
   // byte request[] = {0x03, 0x03, 0x20, 0x00, 0x00, 0x06, 0xCF, 0xEA}; //Disen
-  uint8_t request[] = {0x03, 0x03, 0x21, 0x00, 0x00, 0x02, 0xCF, 0xD5};  //01 03 00 00 00 04 44 09
+  //uint8_t request[] = {0x03, 0x03, 0x21, 0x00, 0x00, 0x02, 0xCF, 0xD5};  //01 03 00 00 00 04 44 09
+  uint8_t request[] = {0x01, 0x06, 0x00, 0x0B, 0x00, 0x03, 0xB8, 0x09};
   uint8_t response[7]; // Dữ liệu nhận về
   digitalWrite(DE, 1);
   RS485.write(request, 8); // Gửi dữ liệu đi
@@ -82,13 +86,14 @@ void loop() {
   //while (millis() -  tTimeOut < timeout) {
   RS485.readBytes(response, 7);
   //}
-  for (int j = 0; j < 7; j++) {
-    
+  for (int j = 0; j < 10; j++) {
+
     Serial.print(response[j], HEX);
     Serial.print(" ");
   }
   Serial.println(" ");
   delay(2000); // Chờ 1 giây trước khi gửi yêu cầu tiếp theo
+  while (1);
 }
 void serialEvent() {
   inputString = "";

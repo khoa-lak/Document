@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"converthexandwriteflash\startup_stm32f103xb.o"
+"converthexandwriteflash\main.o"
+"converthexandwriteflash\stm32f1xx_it.o"
+"converthexandwriteflash\stm32f1xx_hal_msp.o"
+"converthexandwriteflash\stm32f1xx_hal_gpio_ex.o"
+"converthexandwriteflash\stm32f1xx_hal_tim.o"
+"converthexandwriteflash\stm32f1xx_hal_tim_ex.o"
+"converthexandwriteflash\stm32f1xx_hal.o"
+"converthexandwriteflash\stm32f1xx_hal_rcc.o"
+"converthexandwriteflash\stm32f1xx_hal_rcc_ex.o"
+"converthexandwriteflash\stm32f1xx_hal_gpio.o"
+"converthexandwriteflash\stm32f1xx_hal_dma.o"
+"converthexandwriteflash\stm32f1xx_hal_cortex.o"
+"converthexandwriteflash\stm32f1xx_hal_pwr.o"
+"converthexandwriteflash\stm32f1xx_hal_flash.o"
+"converthexandwriteflash\stm32f1xx_hal_flash_ex.o"
+"converthexandwriteflash\stm32f1xx_hal_exti.o"
+"converthexandwriteflash\system_stm32f1xx.o"
+--strict --scatter "convertHexAndWriteFlash\convertHexAndWriteFlash.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "convertHexAndWriteFlash.map" -o convertHexAndWriteFlash\convertHexAndWriteFlash.axf

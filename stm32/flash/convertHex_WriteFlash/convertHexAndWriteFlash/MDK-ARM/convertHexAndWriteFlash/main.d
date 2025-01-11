@@ -26,3 +26,12 @@ converthexandwriteflash\main.o: C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_
 converthexandwriteflash\main.o: C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 converthexandwriteflash\main.o: C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 converthexandwriteflash\main.o: ../Core/Inc/convertSourceHex.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\stdbool.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\stdlib.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iostream
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\rw/_defs.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\rw/_config.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\rw/config.h
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\cwchar
+converthexandwriteflash\main.o: D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\wchar.h

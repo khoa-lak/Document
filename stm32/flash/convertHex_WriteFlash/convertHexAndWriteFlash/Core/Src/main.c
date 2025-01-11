@@ -87,7 +87,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+	char *mes = getHexArray();
+	delete[] mes;
   /* USER CODE END 2 */
 
   /* Infinite loop */
