@@ -7,70 +7,39 @@ C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\conve
 Project File Date:  12/25/2024
 
 <h2>Output:</h2>
-Build target 'convertHexAndWriteFlash'
+Rebuild target 'convertHexAndWriteFlash'
+assembling startup_stm32f103xb.s...
 compiling main.c...
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\rw/_defs.h(781): error:  #20: identifier "namespace" is undefined
-  _RWSTD_NAMESPACE_BEGIN (__rw)
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\rw/_defs.h(781): error:  #65: expected a ";"
-  _RWSTD_NAMESPACE_BEGIN (__rw)
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(93): error:  #20: identifier "namespace" is undefined
-  _RWSTD_NAMESPACE_BEGIN (std)
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(93): error:  #65: expected a ";"
-  _RWSTD_NAMESPACE_BEGIN (std)
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(117): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(122): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(127): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(131): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(136): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(141): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(146): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(150): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(154): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(158): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(162): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(167): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(171): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(175): error:  #65: expected a ";"
-  template<class _CharT,
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(183): error:  #65: expected a ";"
-  typedef basic_ios<char>                                    ios;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(184): error:  #65: expected a ";"
-  typedef basic_streambuf<char>                              streambuf;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(185): error:  #65: expected a ";"
-  typedef basic_istream<char>                                istream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(186): error:  #65: expected a ";"
-  typedef basic_ostream<char>                                ostream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(187): error:  #65: expected a ";"
-  typedef basic_stringbuf<char>                              stringbuf;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(188): error:  #65: expected a ";"
-  typedef basic_istringstream<char>                          istringstream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(189): error:  #65: expected a ";"
-  typedef basic_ostringstream<char>                          ostringstream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(190): error:  #65: expected a ";"
-  typedef basic_filebuf<char>                                filebuf;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(191): error:  #65: expected a ";"
-  typedef basic_ifstream<char>                               ifstream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(192): error:  #65: expected a ";"
-  typedef basic_ofstream<char>                               ofstream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(193): error:  #65: expected a ";"
-  typedef basic_fstream<char>                                fstream;
-D:\Software\Keil_V5\ARM\ARMCC\bin\..\include\iosfwd(194): error:  #65: expected a ";"
-  typedef basic_iostream<char>                               iostream;
-../Core/Src/main.c: 0 warnings, 30 errors
-"convertHexAndWriteFlash\convertHexAndWriteFlash.axf" - 30 Error(s), 0 Warning(s).
+../Core/Inc/convertSourceHex.h(17): warning:  #1295-D: Deprecated declaration checkFile - give arg types
+  bool checkFile();
+../Core/Inc/convertSourceHex.h(20): warning:  #1295-D: Deprecated declaration getAddress - give arg types
+  uint32_t getAddress();
+../Core/Inc/convertSourceHex.h(21): warning:  #1295-D: Deprecated declaration getHexArray - give arg types
+  char* getHexArray();
+../Core/Inc/convertSourceHex.h(22): warning:  #1295-D: Deprecated declaration writeFlash - give arg types
+  void writeFlash();
+../Core/Src/main.c: 4 warnings, 0 errors
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_exti.c...
+compiling system_stm32f1xx.c...
+linking...
+convertHexAndWriteFlash\convertHexAndWriteFlash.axf: Error: L6218E: Undefined symbol getHexArray (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+"convertHexAndWriteFlash\convertHexAndWriteFlash.axf" - 1 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -93,16 +62,3 @@ Target not created
 </pre>
 </body>
 </html>
- (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 3.30.0
-
-<h2>Collection of Component include folders:</h2>
-  C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\convertHexAndWriteFlash\MDK-ARM\RTE
-  D:\Software\Keil_V5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include
-  D:\Software\Keil_V5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include
-
-<h2>Collection of Component Files used:</h2>
-
-   * Component: ARM::CMSIS:CORE:3.30.0
-      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
-Target not created

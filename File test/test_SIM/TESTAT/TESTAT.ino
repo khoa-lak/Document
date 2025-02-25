@@ -80,7 +80,7 @@ void setupSim() {
 void setup()
 {
   // Open serial communications and wait for port to open:
-  Serial.begin(115200);
+  Serial.begin(9600);
   SerialAT.begin(115200);
   pinMode(led, OUTPUT);
   digitalWrite(led, ledStatus);

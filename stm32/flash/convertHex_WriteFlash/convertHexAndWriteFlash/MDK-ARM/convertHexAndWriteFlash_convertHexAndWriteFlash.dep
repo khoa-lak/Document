@@ -1,6 +1,6 @@
 Dependencies for Project 'convertHexAndWriteFlash', Target 'convertHexAndWriteFlash': (DO NOT MODIFY !)
 F (startup_stm32f103xb.s)(0x676C06D3)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\convertHexAndWriteFlash\MDK-ARM\RTE-I D:\Software\Keil_V5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I D:\Software\Keil_V5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include--list startup_stm32f103xb.lst --xref -o converthexandwriteflash\startup_stm32f103xb.o --depend converthexandwriteflash\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x67734A51)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I../Core/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include-I C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\convertHexAndWriteFlash\MDK-ARM\RTE-I D:\Software\Keil_V5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I D:\Software\Keil_V5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o converthexandwriteflash\main.o --omf_browse converthexandwriteflash\main.crf --depend converthexandwriteflash\main.d)
+F (../Core/Src/main.c)(0x67BB0214)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I../Core/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include-I C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\convertHexAndWriteFlash\MDK-ARM\RTE-I D:\Software\Keil_V5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I D:\Software\Keil_V5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o converthexandwriteflash\main.o --omf_browse converthexandwriteflash\main.crf --depend converthexandwriteflash\main.d)
 I (../Core/Inc/main.h)(0x676C06D1)
 I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x66CF41B9)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x676C06D1)
@@ -26,16 +26,9 @@ I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1x
 I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x66CF41B9)
 I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x66CF41B9)
 I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x66CF41B9)
-I (../Core/Inc/convertSourceHex.h)(0x67734A51)
+I (../Core/Inc/convertSourceHex.h)(0x67BB01AE)
 I (D:\Software\Keil_V5\ARM\ARMCC\include\stdbool.h)(0x53464854)
 I (D:\Software\Keil_V5\ARM\ARMCC\include\stdlib.h)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\iostream)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\iosfwd)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\rw\_defs.h)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\rw\_config.h)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\rw\config.h)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\cwchar)(0x53464854)
-I (D:\Software\Keil_V5\ARM\ARMCC\include\wchar.h)(0x53464854)
 F (../Core/Src/stm32f1xx_it.c)(0x676C06D0)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I../Core/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include-I C:\Users\KhoaAnh\Desktop\github\Document\stm32\flash\convertHex_WriteFlash\convertHexAndWriteFlash\MDK-ARM\RTE-I D:\Software\Keil_V5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I D:\Software\Keil_V5\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include-D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o converthexandwriteflash\stm32f1xx_it.o --omf_browse converthexandwriteflash\stm32f1xx_it.crf --depend converthexandwriteflash\stm32f1xx_it.d)
 I (../Core/Inc/main.h)(0x676C06D1)
 I (C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x66CF41B9)

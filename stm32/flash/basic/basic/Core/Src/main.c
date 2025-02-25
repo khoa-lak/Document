@@ -167,7 +167,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		Flash_Read_Data(0x08004810 , Rx_Data, numofwords);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

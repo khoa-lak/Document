@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "test.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -106,6 +106,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 //		SCB->VTOR = (uint32_t)0x08001000;	
+		myCFunction();
 		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
 		HAL_Delay(1500);
 //		if(!HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0)){

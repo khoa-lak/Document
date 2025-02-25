@@ -1,0 +1,5 @@
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/hello_world/HelloWorld/CMakeFiles/HelloWorld.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/hello_world/HelloWorld/CMakeFiles/edit_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/hello_world/HelloWorld/CMakeFiles/rebuild_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/hello_world/HelloWorld/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/hello_world/HelloWorld/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
