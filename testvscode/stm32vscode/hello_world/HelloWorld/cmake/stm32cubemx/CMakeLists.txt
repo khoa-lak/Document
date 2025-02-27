@@ -14,29 +14,32 @@ target_compile_definitions(stm32cubemx INTERFACE
 
 target_include_directories(stm32cubemx INTERFACE
     ../../Core/Inc
-    ../../Drivers/STM32F1xx_HAL_Driver/Inc
-    ../../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
-    ../../Drivers/CMSIS/Device/ST/STM32F1xx/Include
-    ../../Drivers/CMSIS/Include
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
 )
 
 target_sources(stm32cubemx INTERFACE
     ../../Core/Src/main.c
+    ../../Core/Src/gpio.c
+    ../../Core/Src/usart.c
     ../../Core/Src/stm32f1xx_it.c
     ../../Core/Src/stm32f1xx_hal_msp.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
-    ../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
+    C:/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
     ../../Core/Src/system_stm32f1xx.c
     ../../Core/Src/sysmem.c
     ../../Core/Src/syscalls.c
