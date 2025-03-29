@@ -14,7 +14,7 @@ const char* mqttUser = "lab";
 const char* mqttPass = "IotoomVN";
 // Chọn kiểu mã hóa (0: Binary, 1: Hex, 2: Base64)
 #define ENCODING_TYPE 0 // Thay đổi giá trị này để chọn: 0, 1, hoặc 2
-#define FRAME_RATE_MS 100 // 10 FPS (100ms/frame)
+#define FRAME_RATE_MS 30 // 10 FPS (100ms/frame)
 #define VIDEO_DURATION_MS 20000 // 20 giây gửi video
 #define REST_DURATION_MS 10000 // 10 giây nghỉ
 #define FLASH_PIN 4 // GPIO 4 cho flash trên ESP32-CAM
@@ -73,29 +73,29 @@ void setup() {
   config.frame_size = FRAMESIZE_QVGA;   //độ phân giải frame ảnh (FRAMESIZE_QVGA (320x240), FRAMESIZE_VGA (640x480), FRAMESIZE_SVGA (800x600), FRAMESIZE_XGA (1024x768), FRAMESIZE_UXGA (1600x1200))
   config.grab_mode = CAMERA_GRAB_LATEST;
   config.fb_location = CAMERA_FB_IN_PSRAM;
-  config.jpeg_quality = 12;             //chất lượng độ nén (30 = ~20-30 kB)
+  config.jpeg_quality = 15;             //chất lượng độ nén (30 = ~20-30 kB)
   config.fb_count = 2;                  //số frame trong bộ nhớ(2= double buffer, có nghĩa là lấy frame mới trong khi frame cũ đang xử lý)
-  /*
-    esp_err_t err = esp_camera_init(&config);
-    if (err != ESP_OK) {
-      Serial.printf("Camera init failed with error 0x%x", err);
-      delay(1000);
-      ESP.restart(); // Khởi động lại ESP32 nếu lỗi
-    }
-    // Điều chỉnh thông số cảm biến để cải thiện chất lượng ảnh
-    sensor_t *s = esp_camera_sensor_get();
-    s->set_brightness(s, 1);      // Tăng độ sáng (giá trị: -2 đến 2)
-    s->set_contrast(s, 1);        // Tăng độ tương phản (giá trị: -2 đến 2)
-    s->set_saturation(s, 1);      // Tăng độ bão hòa màu (giá trị: -2 đến 2)
-    s->set_whitebal(s, 1);        // Bật cân bằng trắng tự động (0: tắt, 1: bật)
-    s->set_gain_ctrl(s, 1);       // Bật điều khiển gain tự động (0: tắt, 1: bật)
-    s->set_exposure_ctrl(s, 1);   // Bật điều khiển phơi sáng tự động (0: tắt, 1: bật)
-    s->set_framesize(s, FRAMESIZE_QVGA); // Đồng bộ độ phân giải với cấu hình
 
-    Serial.println("Camera initialized successfully");
-    Serial.printf("Free heap: %u bytes\n", ESP.getFreeHeap());
-    =>code cũ chưa bật tắt theo ý
-  */
+  esp_err_t err = esp_camera_init(&config);
+  if (err != ESP_OK) {
+    Serial.printf("Camera init failed with error 0x%x", err);
+    delay(1000);
+    ESP.restart(); // Khởi động lại ESP32 nếu lỗi
+  }
+  // Điều chỉnh thông số cảm biến để cải thiện chất lượng ảnh
+  sensor_t *s = esp_camera_sensor_get();
+  s->set_brightness(s, 1);      // Tăng độ sáng (giá trị: -2 đến 2)
+  s->set_contrast(s, 1);        // Tăng độ tương phản (giá trị: -2 đến 2)
+  s->set_saturation(s, 1);      // Tăng độ bão hòa màu (giá trị: -2 đến 2)
+  s->set_whitebal(s, 1);        // Bật cân bằng trắng tự động (0: tắt, 1: bật)
+  s->set_gain_ctrl(s, 1);       // Bật điều khiển gain tự động (0: tắt, 1: bật)
+  s->set_exposure_ctrl(s, 1);   // Bật điều khiển phơi sáng tự động (0: tắt, 1: bật)
+  s->set_framesize(s, FRAMESIZE_QVGA); // Đồng bộ độ phân giải với cấu hình
+
+  Serial.println("Camera initialized successfully");
+  Serial.printf("Free heap: %u bytes\n", ESP.getFreeHeap());
+  // =>code cũ chưa bật tắt theo ý
+
   // Kết nối WiFi
   delay(1000);
   WiFi.begin(ssid, password);
@@ -109,40 +109,40 @@ void setup() {
 }
 
 void loop() {
-  startCamera();
-  //digitalWrite(FLASH_PIN, HIGH); // Bật flash
-  unsigned long startTime = millis();
-  while (millis() - startTime < VIDEO_DURATION_MS) {
-    unsigned long frameStart = millis();
-    if (!client.connected()) {
-      connectToMQTT();
-    }
-    sendFrameToMQTT();
-    unsigned long elapsed = millis() - frameStart;
-    if (elapsed < FRAME_RATE_MS) {
-      delay(FRAME_RATE_MS - elapsed); // Duy trì 10 FPS
-    } else {
-      Serial.printf("Frame processing took %lu ms, exceeding target %d ms\n", elapsed, FRAME_RATE_MS);
-    }
-  }
-  digitalWrite(FLASH_PIN, LOW); // Tắt flash
-  stopCamera();
-  // Nghỉ 10 giây
-  Serial.println("Camera off, resting for 10 seconds...");
-  delay(REST_DURATION_MS);
-  /*
-    unsigned long startTime = millis();
-    if (!client.connected()) {
-    connectToMQTT();
-    }
-    sendFrameToMQTT();
+  //  startCamera();
+  //  //digitalWrite(FLASH_PIN, HIGH); // Bật flash
+  //  unsigned long startTime = millis();
+  //  while (millis() - startTime < VIDEO_DURATION_MS) {
+  //    unsigned long frameStart = millis();
+  //    if (!client.connected()) {
+  //      connectToMQTT();
+  //    }
+  //    sendFrameToMQTT();
+  //    unsigned long elapsed = millis() - frameStart;
+  //    if (elapsed < FRAME_RATE_MS) {
+  //      delay(FRAME_RATE_MS - elapsed); // Duy trì 10 FPS
+  //    } else {
+  //      Serial.printf("Frame processing took %lu ms, exceeding target %d ms\n", elapsed, FRAME_RATE_MS);
+  //    }
+  //  }
+  //  digitalWrite(FLASH_PIN, LOW); // Tắt flash
+  //  stopCamera();
+  //  // Nghỉ 10 giây
+  //  Serial.println("Camera off, resting for 10 seconds...");
+  //  delay(REST_DURATION_MS);
 
-    unsigned long elapsed = millis() - startTime;
-    if (elapsed < FRAME_RATE_MS) {
+  unsigned long startTime = millis();
+  if (!client.connected()) {
+    connectToMQTT();
+  }
+  sendFrameToMQTT();
+
+  unsigned long elapsed = millis() - startTime;
+  if (elapsed < FRAME_RATE_MS) {
     delay(FRAME_RATE_MS - elapsed); // 10 FPS
-    }
-    =>code cũ chưa bật tắt theo ý
-  */
+  }
+  // =>code cũ chưa bật tắt theo ý
+
 }
 void startCamera() {
   digitalWrite(PWDN_GPIO_NUM, LOW); // Bật nguồn camera
