@@ -11,7 +11,10 @@ cmake_minimum_required(VERSION 3.22)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
-
+# Setup C++ settings
+set(CMAKE_CXX_STANDARD 11)  # Đặt chuẩn C++11 (hoặc 14, 17 tùy ý)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)  # Tắt extension để đảm bảo tính tương thích
 
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -48,16 +51,23 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    Core/Src/my_cpp_lib.cpp 
+    Core/Src/wrapper.cpp 
+    Core/Src/unix_time.cpp
+    Core/Src/calculate_value.cpp
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    Core/Inc
 )
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined symbols
+    -fno-rtti  # Tắt RTTI
+    -fno-exceptions  # Tắt exception handling
 )
 
 # Add linked libraries

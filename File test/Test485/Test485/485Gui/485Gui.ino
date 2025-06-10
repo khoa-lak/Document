@@ -54,8 +54,8 @@
 //}
 //
 #include <SoftwareSerial.h>
-SoftwareSerial RS485(PA3, PA2); // Khởi tạo kết nối với MAX3485 thông qua chân PC10 và PC11
-#define DE PA1
+SoftwareSerial RS485(PA10, PA9); // Khởi tạo kết nối với MAX3485 thông qua chân PC10 và PC11
+#define DE PB0
 String inputString;
 //SoftwareSerial RS485(PA10, PA9); // Khởi tạo kết nối với MAX3485 thông qua chân PC10 và PC11
 //#define DE PA8
@@ -78,7 +78,7 @@ void loop() {
   // byte request[] = {0x03, 0x03, 0x20, 0x00, 0x00, 0x06, 0xCF, 0xEA}; //Disen
   //uint8_t request[] = {0x03, 0x03, 0x21, 0x00, 0x00, 0x02, 0xCF, 0xD5};  //01 03 00 00 00 04 44 09
   //uint8_t request[] = {0x01, 0x06, 0x00, 0x0B, 0x00, 0x03, 0xB8, 0x09};
-  uint8_t request[] = {0x05, 0x03, 0x26, 0x00, 0x00, 0x06, 0xCF, 0x04};
+  uint8_t request[8] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x06, 0xC5, 0xC8};
   uint8_t response[17]; // Dữ liệu nhận về
   digitalWrite(DE, 1);
   RS485.write(request, 8); // Gửi dữ liệu đi
@@ -87,7 +87,7 @@ void loop() {
   //while (millis() -  tTimeOut < timeout) {
   RS485.readBytes(response, 17);
   //}
-  for (int j = 0; j < 17; j++) {
+  for (int j = 0; j < 20; j++) {
 
     Serial.print(response[j], HEX);
     Serial.print(" ");

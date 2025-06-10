@@ -1,0 +1,5 @@
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/AddLibC++/LibCplus/CMakeFiles/LibCplus.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/AddLibC++/LibCplus/CMakeFiles/edit_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/AddLibC++/LibCplus/CMakeFiles/rebuild_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/AddLibC++/LibCplus/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/KhoaAnh/Desktop/github/Document/testvscode/stm32vscode/AddLibC++/LibCplus/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

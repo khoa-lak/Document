@@ -2471,7 +2471,7 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
                 0x08000000                g_pfnVectors
                 0x0800010c                        . = ALIGN (0x4)
 
-.text           0x0800010c     0x1384
+.text           0x0800010c     0x1390
                 0x0800010c                        . = ALIGN (0x4)
  *(.text)
  .text          0x0800010c       0x40 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -2481,245 +2481,244 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
  .text.__libc_init_array
                 0x0800015c       0x48 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
                 0x0800015c                __libc_init_array
- .text.main     0x080001a4       0x18 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .text.main     0x080001a4       0x26 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
                 0x080001a4                main
  .text.SystemClock_Config
-                0x080001bc       0x76 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
-                0x080001bc                SystemClock_Config
+                0x080001ca       0x76 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+                0x080001ca                SystemClock_Config
  .text.Error_Handler
-                0x08000232        0xc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
-                0x08000232                Error_Handler
- *fill*         0x0800023e        0x2 
+                0x08000240        0xc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+                0x08000240                Error_Handler
  .text.MX_GPIO_Init
-                0x08000240       0x98 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
-                0x08000240                MX_GPIO_Init
+                0x0800024c       0x98 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+                0x0800024c                MX_GPIO_Init
  .text.MX_USART1_UART_Init
-                0x080002d8       0x54 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
-                0x080002d8                MX_USART1_UART_Init
+                0x080002e4       0x54 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+                0x080002e4                MX_USART1_UART_Init
  .text.HAL_UART_MspInit
-                0x0800032c       0x98 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
-                0x0800032c                HAL_UART_MspInit
+                0x08000338       0x98 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+                0x08000338                HAL_UART_MspInit
  .text.NMI_Handler
-                0x080003c4        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003c4                NMI_Handler
+                0x080003d0        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x080003d0                NMI_Handler
  .text.HardFault_Handler
-                0x080003cc        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003cc                HardFault_Handler
+                0x080003d8        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x080003d8                HardFault_Handler
  .text.MemManage_Handler
-                0x080003d4        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003d4                MemManage_Handler
+                0x080003e0        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x080003e0                MemManage_Handler
  .text.BusFault_Handler
-                0x080003dc        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003dc                BusFault_Handler
+                0x080003e8        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x080003e8                BusFault_Handler
  .text.UsageFault_Handler
-                0x080003e4        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003e4                UsageFault_Handler
+                0x080003f0        0x8 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x080003f0                UsageFault_Handler
  .text.SVC_Handler
-                0x080003ec        0xc CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003ec                SVC_Handler
- .text.DebugMon_Handler
                 0x080003f8        0xc CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x080003f8                DebugMon_Handler
- .text.PendSV_Handler
+                0x080003f8                SVC_Handler
+ .text.DebugMon_Handler
                 0x08000404        0xc CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x08000404                PendSV_Handler
- .text.SysTick_Handler
+                0x08000404                DebugMon_Handler
+ .text.PendSV_Handler
                 0x08000410        0xc CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
-                0x08000410                SysTick_Handler
+                0x08000410                PendSV_Handler
+ .text.SysTick_Handler
+                0x0800041c        0xc CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+                0x0800041c                SysTick_Handler
  .text.HAL_MspInit
-                0x0800041c       0x64 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
-                0x0800041c                HAL_MspInit
+                0x08000428       0x64 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+                0x08000428                HAL_MspInit
  .text.HAL_UART_Init
-                0x08000480       0xa0 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
-                0x08000480                HAL_UART_Init
+                0x0800048c       0xa0 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0800048c                HAL_UART_Init
  .text.UART_SetConfig
-                0x08000520      0x11c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+                0x0800052c      0x11c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
  .text.HAL_Init
-                0x0800063c       0x2c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x0800063c                HAL_Init
+                0x08000648       0x2c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x08000648                HAL_Init
  .text.HAL_InitTick
-                0x08000668       0x60 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x08000668                HAL_InitTick
+                0x08000674       0x60 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x08000674                HAL_InitTick
  .text.HAL_IncTick
-                0x080006c8       0x24 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x080006c8                HAL_IncTick
+                0x080006d4       0x24 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x080006d4                HAL_IncTick
  .text.HAL_GetTick
-                0x080006ec       0x14 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
-                0x080006ec                HAL_GetTick
+                0x080006f8       0x14 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+                0x080006f8                HAL_GetTick
  .text.HAL_RCC_OscConfig
-                0x08000700      0x504 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000700                HAL_RCC_OscConfig
+                0x0800070c      0x504 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0800070c                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08000c04      0x1d4 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000c04                HAL_RCC_ClockConfig
+                0x08000c10      0x1d4 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000c10                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x08000dd8       0xa8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000dd8                HAL_RCC_GetSysClockFreq
+                0x08000de4       0xa8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000de4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x08000e80       0x14 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000e80                HAL_RCC_GetHCLKFreq
+                0x08000e8c       0x14 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000e8c                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08000e94       0x28 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000e94                HAL_RCC_GetPCLK1Freq
+                0x08000ea0       0x28 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000ea0                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08000ebc       0x28 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
-                0x08000ebc                HAL_RCC_GetPCLK2Freq
+                0x08000ec8       0x28 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000ec8                HAL_RCC_GetPCLK2Freq
  .text.RCC_Delay
-                0x08000ee4       0x3c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x08000ef0       0x3c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .text.HAL_GPIO_Init
-                0x08000f20      0x308 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
-                0x08000f20                HAL_GPIO_Init
+                0x08000f2c      0x308 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x08000f2c                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x08001228       0x30 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
-                0x08001228                HAL_GPIO_WritePin
+                0x08001234       0x30 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+                0x08001234                HAL_GPIO_WritePin
  .text.__NVIC_SetPriorityGrouping
-                0x08001258       0x48 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x08001264       0x48 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.__NVIC_GetPriorityGrouping
-                0x080012a0       0x1c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x080012ac       0x1c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.__NVIC_SetPriority
-                0x080012bc       0x54 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x080012c8       0x54 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.NVIC_EncodePriority
-                0x08001310       0x64 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x0800131c       0x64 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.SysTick_Config
-                0x08001374       0x44 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x08001380       0x44 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080013b8       0x16 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x080013b8                HAL_NVIC_SetPriorityGrouping
+                0x080013c4       0x16 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x080013c4                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080013ce       0x38 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x080013ce                HAL_NVIC_SetPriority
+                0x080013da       0x38 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x080013da                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x08001406       0x18 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
-                0x08001406                HAL_SYSTICK_Config
+                0x08001412       0x18 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+                0x08001412                HAL_SYSTICK_Config
  .text.SystemInit
-                0x0800141e        0xc CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
-                0x0800141e                SystemInit
- *fill*         0x0800142a        0x2 
+                0x0800142a        0xc CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+                0x0800142a                SystemInit
+ *fill*         0x08001436        0x2 
  .text.Reset_Handler
-                0x0800142c       0x48 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
-                0x0800142c                Reset_Handler
+                0x08001438       0x48 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+                0x08001438                Reset_Handler
  .text.Default_Handler
-                0x08001474        0x2 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
-                0x08001474                RTC_Alarm_IRQHandler
-                0x08001474                EXTI2_IRQHandler
-                0x08001474                TIM1_CC_IRQHandler
-                0x08001474                PVD_IRQHandler
-                0x08001474                EXTI3_IRQHandler
-                0x08001474                EXTI0_IRQHandler
-                0x08001474                I2C2_EV_IRQHandler
-                0x08001474                ADC1_2_IRQHandler
-                0x08001474                SPI1_IRQHandler
-                0x08001474                TAMPER_IRQHandler
-                0x08001474                DMA1_Channel4_IRQHandler
-                0x08001474                USART3_IRQHandler
-                0x08001474                RTC_IRQHandler
-                0x08001474                DMA1_Channel7_IRQHandler
-                0x08001474                CAN1_RX1_IRQHandler
-                0x08001474                TIM4_IRQHandler
-                0x08001474                I2C1_EV_IRQHandler
-                0x08001474                DMA1_Channel6_IRQHandler
-                0x08001474                TIM3_IRQHandler
-                0x08001474                RCC_IRQHandler
-                0x08001474                TIM1_TRG_COM_IRQHandler
-                0x08001474                DMA1_Channel1_IRQHandler
-                0x08001474                Default_Handler
-                0x08001474                EXTI15_10_IRQHandler
-                0x08001474                EXTI9_5_IRQHandler
-                0x08001474                SPI2_IRQHandler
-                0x08001474                DMA1_Channel5_IRQHandler
-                0x08001474                EXTI4_IRQHandler
-                0x08001474                USB_LP_CAN1_RX0_IRQHandler
-                0x08001474                USB_HP_CAN1_TX_IRQHandler
-                0x08001474                DMA1_Channel3_IRQHandler
-                0x08001474                TIM1_UP_IRQHandler
-                0x08001474                WWDG_IRQHandler
-                0x08001474                TIM2_IRQHandler
-                0x08001474                TIM1_BRK_IRQHandler
-                0x08001474                EXTI1_IRQHandler
-                0x08001474                USART2_IRQHandler
-                0x08001474                I2C2_ER_IRQHandler
-                0x08001474                DMA1_Channel2_IRQHandler
-                0x08001474                CAN1_SCE_IRQHandler
-                0x08001474                FLASH_IRQHandler
-                0x08001474                USART1_IRQHandler
-                0x08001474                I2C1_ER_IRQHandler
-                0x08001474                USBWakeUp_IRQHandler
+                0x08001480        0x2 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+                0x08001480                RTC_Alarm_IRQHandler
+                0x08001480                EXTI2_IRQHandler
+                0x08001480                TIM1_CC_IRQHandler
+                0x08001480                PVD_IRQHandler
+                0x08001480                EXTI3_IRQHandler
+                0x08001480                EXTI0_IRQHandler
+                0x08001480                I2C2_EV_IRQHandler
+                0x08001480                ADC1_2_IRQHandler
+                0x08001480                SPI1_IRQHandler
+                0x08001480                TAMPER_IRQHandler
+                0x08001480                DMA1_Channel4_IRQHandler
+                0x08001480                USART3_IRQHandler
+                0x08001480                RTC_IRQHandler
+                0x08001480                DMA1_Channel7_IRQHandler
+                0x08001480                CAN1_RX1_IRQHandler
+                0x08001480                TIM4_IRQHandler
+                0x08001480                I2C1_EV_IRQHandler
+                0x08001480                DMA1_Channel6_IRQHandler
+                0x08001480                TIM3_IRQHandler
+                0x08001480                RCC_IRQHandler
+                0x08001480                TIM1_TRG_COM_IRQHandler
+                0x08001480                DMA1_Channel1_IRQHandler
+                0x08001480                Default_Handler
+                0x08001480                EXTI15_10_IRQHandler
+                0x08001480                EXTI9_5_IRQHandler
+                0x08001480                SPI2_IRQHandler
+                0x08001480                DMA1_Channel5_IRQHandler
+                0x08001480                EXTI4_IRQHandler
+                0x08001480                USB_LP_CAN1_RX0_IRQHandler
+                0x08001480                USB_HP_CAN1_TX_IRQHandler
+                0x08001480                DMA1_Channel3_IRQHandler
+                0x08001480                TIM1_UP_IRQHandler
+                0x08001480                WWDG_IRQHandler
+                0x08001480                TIM2_IRQHandler
+                0x08001480                TIM1_BRK_IRQHandler
+                0x08001480                EXTI1_IRQHandler
+                0x08001480                USART2_IRQHandler
+                0x08001480                I2C2_ER_IRQHandler
+                0x08001480                DMA1_Channel2_IRQHandler
+                0x08001480                CAN1_SCE_IRQHandler
+                0x08001480                FLASH_IRQHandler
+                0x08001480                USART1_IRQHandler
+                0x08001480                I2C1_ER_IRQHandler
+                0x08001480                USBWakeUp_IRQHandler
  *(.glue_7)
- .glue_7        0x08001476        0x0 linker stubs
+ .glue_7        0x08001482        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08001476        0x0 linker stubs
+ .glue_7t       0x08001482        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x08001476        0x2 
- .eh_frame      0x08001478        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ *fill*         0x08001482        0x2 
+ .eh_frame      0x08001484        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08001478        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
-                0x08001478                _init
- .init          0x0800147c        0x8 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08001484        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+                0x08001484                _init
+ .init          0x08001488        0x8 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08001484        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
-                0x08001484                _fini
- .fini          0x08001488        0x8 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
-                0x08001490                        . = ALIGN (0x4)
-                0x08001490                        _etext = .
+ .fini          0x08001490        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crti.o
+                0x08001490                _fini
+ .fini          0x08001494        0x8 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtn.o
+                0x0800149c                        . = ALIGN (0x4)
+                0x0800149c                        _etext = .
 
-.vfp11_veneer   0x08001490        0x0
- .vfp11_veneer  0x08001490        0x0 linker stubs
+.vfp11_veneer   0x0800149c        0x0
+ .vfp11_veneer  0x0800149c        0x0 linker stubs
 
-.v4_bx          0x08001490        0x0
- .v4_bx         0x08001490        0x0 linker stubs
+.v4_bx          0x0800149c        0x0
+ .v4_bx         0x0800149c        0x0 linker stubs
 
-.iplt           0x08001490        0x0
- .iplt          0x08001490        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0800149c        0x0
+ .iplt          0x0800149c        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08001490       0x2c
-                0x08001490                        . = ALIGN (0x4)
+.rodata         0x0800149c       0x2c
+                0x0800149c                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.aPLLMULFactorTable.1
-                0x08001490       0x10 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+                0x0800149c       0x10 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  .rodata.aPredivFactorTable.0
-                0x080014a0        0x2 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- *fill*         0x080014a2        0x2 
+                0x080014ac        0x2 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ *fill*         0x080014ae        0x2 
  .rodata.AHBPrescTable
-                0x080014a4       0x10 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
-                0x080014a4                AHBPrescTable
+                0x080014b0       0x10 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+                0x080014b0                AHBPrescTable
  .rodata.APBPrescTable
-                0x080014b4        0x8 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
-                0x080014b4                APBPrescTable
-                0x080014bc                        . = ALIGN (0x4)
+                0x080014c0        0x8 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+                0x080014c0                APBPrescTable
+                0x080014c8                        . = ALIGN (0x4)
 
-.rel.dyn        0x080014bc        0x0
- .rel.iplt      0x080014bc        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x080014c8        0x0
+ .rel.iplt      0x080014c8        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x080014bc        0x0
-                0x080014bc                        __exidx_start = .
+.ARM            0x080014c8        0x0
+                0x080014c8                        __exidx_start = .
  *(.ARM.exidx*)
-                0x080014bc                        __exidx_end = .
+                0x080014c8                        __exidx_end = .
 
-.preinit_array  0x080014bc        0x0
-                0x080014bc                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080014c8        0x0
+                0x080014c8                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080014bc                        PROVIDE (__preinit_array_end = .)
+                0x080014c8                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x080014bc        0x4
-                0x080014bc                        PROVIDE (__init_array_start = .)
+.init_array     0x080014c8        0x4
+                0x080014c8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x080014bc        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x080014c0                        PROVIDE (__init_array_end = .)
+ .init_array    0x080014c8        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x080014cc                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x080014c0        0x4
+.fini_array     0x080014cc        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080014c0        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x080014cc        0x4 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x080014c4                        _sidata = LOADADDR (.data)
+                0x080014d0                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x080014c4
+.data           0x20000000        0xc load address 0x080014d0
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -2737,11 +2736,11 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
 
-.igot.plt       0x2000000c        0x0 load address 0x080014d0
+.igot.plt       0x2000000c        0x0 load address 0x080014dc
  .igot.plt      0x2000000c        0x0 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x2000000c                        . = ALIGN (0x4)
 
-.bss            0x2000000c       0x68 load address 0x080014d0
+.bss            0x2000000c       0x68 load address 0x080014dc
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.bss)
@@ -2757,7 +2756,7 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
                 0x20000074                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000074      0x604 load address 0x080014d0
+                0x20000074      0x604 load address 0x080014dc
                 0x20000078                        . = ALIGN (0x8)
  *fill*         0x20000074        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -2816,48 +2815,48 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
 LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_frame    0x00000000     0x16f4
+.debug_frame    0x00000000     0x16f8
  .debug_frame   0x00000000       0x20 D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-memset.o)
  .debug_frame   0x00000020       0x2c D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(libc_a-init.o)
- .debug_frame   0x0000004c       0x68 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_frame   0x000000b4       0x34 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
- .debug_frame   0x000000e8       0x74 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
- .debug_frame   0x0000015c      0x104 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_frame   0x00000260       0x38 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_frame   0x00000298      0x944 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_frame   0x00000bdc      0x334 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_frame   0x00000f10      0x218 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_frame   0x00001128      0x14c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_frame   0x00001274      0x428 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_frame   0x0000169c       0x58 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_frame   0x0000004c       0x6c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_frame   0x000000b8       0x34 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+ .debug_frame   0x000000ec       0x74 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_frame   0x00000160      0x104 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_frame   0x00000264       0x38 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_frame   0x0000029c      0x944 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_frame   0x00000be0      0x334 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_frame   0x00000f14      0x218 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_frame   0x0000112c      0x14c CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_frame   0x00001278      0x428 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_frame   0x000016a0       0x58 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
 
-.debug_info     0x00000000     0x6075
- .debug_info    0x00000000      0x2d8 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_info    0x000002d8      0x2b7 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
- .debug_info    0x0000058f      0x798 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
- .debug_info    0x00000d27      0x113 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_info    0x00000e3a      0x1f1 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_info    0x0000102b     0x2eed CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_info    0x00003f18      0x704 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_info    0x0000461c      0x7d5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_info    0x00004df1      0x5ab CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_info    0x0000539c      0xa87 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_info    0x00005e23      0x222 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_info    0x00006045       0x30 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+.debug_info     0x00000000     0x60b0
+ .debug_info    0x00000000      0x313 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_info    0x00000313      0x2b7 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+ .debug_info    0x000005ca      0x798 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_info    0x00000d62      0x113 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_info    0x00000e75      0x1f1 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_info    0x00001066     0x2eed CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_info    0x00003f53      0x704 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_info    0x00004657      0x7d5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_info    0x00004e2c      0x5ab CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_info    0x000053d7      0xa87 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_info    0x00005e5e      0x222 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_info    0x00006080       0x30 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
 
-.debug_abbrev   0x00000000     0x13dd
- .debug_abbrev  0x00000000      0x199 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000199      0x13f CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x000002d8      0x1e6 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x000004be       0x73 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_abbrev  0x00000531       0xdb CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_abbrev  0x0000060c      0x2f8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_abbrev  0x00000904      0x201 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_abbrev  0x00000b05      0x2b3 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_abbrev  0x00000db8      0x1ca CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_abbrev  0x00000f82      0x2f8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_abbrev  0x0000127a      0x13f CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_abbrev  0x000013b9       0x24 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+.debug_abbrev   0x00000000     0x1414
+ .debug_abbrev  0x00000000      0x1d0 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x000001d0      0x13f CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x0000030f      0x1e6 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x000004f5       0x73 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_abbrev  0x00000568       0xdb CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_abbrev  0x00000643      0x2f8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_abbrev  0x0000093b      0x201 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_abbrev  0x00000b3c      0x2b3 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_abbrev  0x00000def      0x1ca CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_abbrev  0x00000fb9      0x2f8 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_abbrev  0x000012b1      0x13f CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_abbrev  0x000013f0       0x24 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
 
 .debug_aranges  0x00000000      0x620
  .debug_aranges
@@ -2912,92 +2911,92 @@ LOAD D:/Software/st-clt/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/a
  .debug_rnglists
                 0x00000488       0x19 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
 
-.debug_macro    0x00000000    0x16106
- .debug_macro   0x00000000      0x1ba CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000001ba      0xaa8 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000c62      0x215 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000e77       0x2e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000ea5       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000ec7       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000ee9       0x8e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000f77       0x51 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00000fc8      0x103 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000010cb       0x6a CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00001135      0x1df CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00001314       0x1c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00001330       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00001352       0xbd CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x0000140f      0xd23 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00002132     0xe09e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000101d0       0x6d CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x0001023d     0x34a2 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000136df      0x189 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00013868       0x5c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000138c4      0x5bc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00013e80      0x289 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00014109      0x1cb CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000142d4      0x114 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000143e8      0x1b2 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x0001459a       0x27 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000145c1      0x136 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000146f7      0x1bc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000148b3       0x34 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x000148e7       0x3c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00014923       0x57 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x0001497a       0x87 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00014a01      0x240 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00014c41      0x140 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00014d81      0x28e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x0001500f       0x83 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_macro   0x00015092      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
- .debug_macro   0x00015234      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
- .debug_macro   0x000153d6      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_macro   0x00015578      0x198 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_macro   0x00015710      0x18f CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_macro   0x0001589f      0x1b2 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_macro   0x00015a51      0x1a0 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_macro   0x00015bf1      0x1f9 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_macro   0x00015dea      0x18e CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_macro   0x00015f78      0x18e CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+.debug_macro    0x00000000    0x16110
+ .debug_macro   0x00000000      0x1c4 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000001c4      0xaa8 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000c6c      0x215 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000e81       0x2e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000eaf       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000ed1       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000ef3       0x8e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000f81       0x51 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000fd2      0x103 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000010d5       0x6a CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000113f      0x1df CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000131e       0x1c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000133a       0x22 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000135c       0xbd CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00001419      0xd23 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000213c     0xe09e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000101da       0x6d CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00010247     0x34a2 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000136e9      0x189 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00013872       0x5c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000138ce      0x5bc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00013e8a      0x289 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014113      0x1cb CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000142de      0x114 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000143f2      0x1b2 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000145a4       0x27 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000145cb      0x136 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014701      0x1bc CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000148bd       0x34 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x000148f1       0x3c CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001492d       0x57 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014984       0x87 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014a0b      0x240 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014c4b      0x140 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00014d8b      0x28e CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x00015019       0x83 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001509c      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+ .debug_macro   0x0001523e      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_macro   0x000153e0      0x1a2 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_macro   0x00015582      0x198 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_macro   0x0001571a      0x18f CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_macro   0x000158a9      0x1b2 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_macro   0x00015a5b      0x1a0 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_macro   0x00015bfb      0x1f9 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_macro   0x00015df4      0x18e CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_macro   0x00015f82      0x18e CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
 
-.debug_line     0x00000000     0x82dd
- .debug_line    0x00000000      0x79d CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
- .debug_line    0x0000079d      0x722 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
- .debug_line    0x00000ebf      0x783 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
- .debug_line    0x00001642      0x7d6 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_line    0x00001e18      0x715 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_line    0x0000252d     0x2884 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
- .debug_line    0x00004db1      0x9a5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_line    0x00005756      0xdae CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_line    0x00006504      0xa3e CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_line    0x00006f42      0xb91 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_line    0x00007ad3      0x792 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_line    0x00008265       0x78 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+.debug_line     0x00000000     0x82f3
+ .debug_line    0x00000000      0x7b3 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+ .debug_line    0x000007b3      0x722 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00000ed5      0x783 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_line    0x00001658      0x7d6 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_line    0x00001e2e      0x715 CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_line    0x00002543     0x2884 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_line    0x00004dc7      0x9a5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_line    0x0000576c      0xdae CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_line    0x0000651a      0xa3e CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_line    0x00006f58      0xb91 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_line    0x00007ae9      0x792 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_line    0x0000827b       0x78 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
 
-.debug_str      0x00000000    0x7e673
- .debug_str     0x00000000    0x7c85b CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
-                              0x7cb89 (size before relaxing)
- .debug_str     0x0007c85b      0x145 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
+.debug_str      0x00000000    0x7e6ae
+ .debug_str     0x00000000    0x7c896 CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj
+                              0x7cbc4 (size before relaxing)
+ .debug_str     0x0007c896      0x145 CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj
                               0x7ca7b (size before relaxing)
- .debug_str     0x0007c9a0      0x441 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
+ .debug_str     0x0007c9db      0x441 CMakeFiles/HelloWorld.dir/Core/Src/usart.c.obj
                               0x7cec3 (size before relaxing)
- .debug_str     0x0007cde1      0x11d CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_str     0x0007ce1c      0x11d CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj
                               0x7ca18 (size before relaxing)
- .debug_str     0x0007cefe       0xae CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_str     0x0007cf39       0xae CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj
                               0x7ca03 (size before relaxing)
- .debug_str     0x0007cfac      0x6f4 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ .debug_str     0x0007cfe7      0x6f4 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
                               0x7d4b4 (size before relaxing)
- .debug_str     0x0007d6a0      0x645 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_str     0x0007d6db      0x645 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
                               0x7d147 (size before relaxing)
- .debug_str     0x0007dce5      0x24a CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_str     0x0007dd20      0x24a CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
                               0x7ce43 (size before relaxing)
- .debug_str     0x0007df2f      0x320 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_str     0x0007df6a      0x320 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
                               0x7cd9a (size before relaxing)
- .debug_str     0x0007e24f      0x2f5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_str     0x0007e28a      0x2f5 CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
                               0x7d093 (size before relaxing)
- .debug_str     0x0007e544       0xa6 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_str     0x0007e57f       0xa6 CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj
                               0x7ca2e (size before relaxing)
- .debug_str     0x0007e5ea       0x89 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
+ .debug_str     0x0007e625       0x89 CMakeFiles/HelloWorld.dir/startup_stm32f103xb.s.obj
                                  0xec (size before relaxing)
 
 .comment        0x00000000       0x43

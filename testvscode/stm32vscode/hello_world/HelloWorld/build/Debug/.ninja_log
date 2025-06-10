@@ -4,11 +4,11 @@
 30	988	7621977996532920	CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_it.c.obj	2efe5ca44e4e0d6e
 28	696	7621972812864310	CMakeFiles/HelloWorld.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj	3e55864771855b5e
 31	746	7621972706200155	CMakeFiles/HelloWorld.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj	a2b1a21ad8e8296a
-4	221	7622008866402137	CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj	f71f8fb13a9e754c
-58	831	7621977996254248	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	d3137dad6dd391fe
 815	1427	7621978002343126	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj	c05253a66799761b
+58	831	7621977996254248	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	d3137dad6dd391fe
+974	1557	7657346888091548	HelloWorld.elf	248c1d1f716e206
 85	818	7621972707183864	CMakeFiles/HelloWorld.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj	6072e77caab76020
-221	403	7622008868085077	HelloWorld.elf	248c1d1f716e206
+4	257	7657350953141611	CMakeFiles/HelloWorld.dir/Core/Src/main.c.obj	f71f8fb13a9e754c
 63	994	7621977997418238	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj	982eb72fdfd104b5
 34	815	7621977995737527	CMakeFiles/HelloWorld.dir/Core/Src/stm32f1xx_hal_msp.c.obj	74a6af2ecf31f30e
 73	791	7621977995897602	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj	2b5239d0d3bc98f0
@@ -26,7 +26,7 @@
 844	2062	7621978008741165	CMakeFiles/HelloWorld.dir/Core/Src/syscalls.c.obj	745c4b49d7ce8df6
 831	1638	7621978004457198	CMakeFiles/HelloWorld.dir/Core/Src/sysmem.c.obj	791cd856cbaeb90c
 824	1399	7621978002014725	CMakeFiles/HelloWorld.dir/Core/Src/system_stm32f1xx.c.obj	79c55a0697ebcc49
-19	422	7623307236726149	build.ninja	cb77b9f93e59e268
+19	422	7675346077388279	build.ninja	cb77b9f93e59e268
 48	931	7621972708211684	CMakeFiles/HelloWorld.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj	a860022bc0fc4fe4
 759	1376	7621978001809834	CMakeFiles/HelloWorld.dir/C_/Users/KhoaAnh/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj	811d434ce595116b
 24	799	7621977995623344	CMakeFiles/HelloWorld.dir/Core/Src/gpio.c.obj	ab3eea6ee1abef14
