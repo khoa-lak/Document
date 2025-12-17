@@ -9,8 +9,11 @@ void class_FuncMain::Running() {
   return;
 }
 bool class_FuncMain::connectSim() {
-  if (simA76xxx.Func_InitSim())
+  if (simA76xxx.Func_InitSim()) {
+    delay(10000);
     simA76xxx.Func_FollowTopic();
+  }
+
   //bool done = simA76xxx.ui8_commandRun;
   return 1;
 }

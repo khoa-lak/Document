@@ -9,12 +9,12 @@
 //
 #include <SPI.h>
 #include <RH_RF95.h>
-#define rstLora PA2
-#define d0Lora  PA3
-#define nssLora PA4
-#define mosi    PA7
-#define miso    PA6
-#define clk     PA5
+#define rstLora PB11
+#define d0Lora  PC8
+#define nssLora PB12
+#define mosi    PB15
+#define miso    PB14
+#define clk     PB13
 #define led PC13
 // Singleton instance of the radio driver
 //SPIClass SPIClass(PB15, PB14, PB13, PB12);
@@ -44,34 +44,50 @@ void lora() {
 }
 void loop() {
   blink_led();
-  //  if (rf95.available())
-  //  {
-  //    uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
-  //    uint8_t len = sizeof(buf);
-  //    if (rf95.recv(buf, &len))
-  //    {
-  //      digitalWrite(led, 0);
-  //      Serial.print("got request: ");
-  //      Serial.println((char*)buf);
-  uint8_t data[] = "And hello back to you1111111111111";
-  rf95.send(data, sizeof(data));
-  rf95.waitPacketSent();
-  Serial.println("Sent a reply");
-  //    }
-  //    else
-  //    {
-  //      digitalWrite(led, 1);
-  //      digitalWrite(rstLora , 0);
-  //      Serial.println("recv failed");
-  //      delay(500);
-  //      digitalWrite(rstLora , 1);
-  //    }
-  //delay(3000);
-  HAL_Delay(3000);
-  //}
+  if (rf95.available())
+  {
+    //getLogsLora();
+    uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
+    uint8_t len = sizeof(buf);
+    Serial.print("got request: ");
+    if (rf95.recv(buf, &len))    {
+      Serial.println((char*)buf);
+      uint8_t data[] = "And hello back to you1111111111111";
+      rf95.send(data, sizeof(data));
+      rf95.waitPacketSent();
+      Serial.println("Sent a reply");
+    }
+    else
+    {
+      digitalWrite(led, 1);
+      digitalWrite(rstLora , 0);
+      Serial.println("recv failed");
+      delay(500);
+      digitalWrite(rstLora , 1);
+    }
+    //delay(3000);
+    //HAL_Delay(3000);
+  }
 
 }
-
+char* getLogsLora() {
+  Serial.print("got request: \n");
+  String msg = "";
+  while (rf95.available()) {
+    while (true) {
+      uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
+      uint8_t len = sizeof(buf);
+      if (rf95.recv(buf, &len))
+      {
+        msg += String((char*)buf);
+      }
+      if (msg.indexOf("END SEND LOGS") != -1)
+        break;
+    }
+  }
+  Serial.println(msg);
+  return nullptr;
+}
 void blink_led() {
   uint16_t tim = 500;
   uint8_t en = digitalRead(led);

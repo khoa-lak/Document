@@ -36,19 +36,19 @@ void setup() {
 //  digitalWrite(PB8, 0);
 //  digitalWrite(PB9, 0);
 }
-int freeRam(void)
-{
-  extern int __bss_end;
-  extern int *__brkval;
-  int free_memory;
-  if ((int)__brkval == 0) {
-    free_memory = ((int)&free_memory) - ((int)&__bss_end);
-  }
-  else {
-    free_memory = ((int)&free_memory) - ((int)__brkval);
-  }
-  return free_memory;
-}
+// int freeRam(void)
+// {
+//   extern int __bss_end;
+//   extern int *__brkval;
+//   int free_memory;
+//   if ((int)__brkval == 0) {
+//     free_memory = ((int)&free_memory) - ((int)&__bss_end);
+//   }
+//   else {
+//     free_memory = ((int)&free_memory) - ((int)__brkval);
+//   }
+//   return free_memory;
+// }
 // the loop function runs over and over again forever
 void loop() {
   //Serial.println("in trước: " + String(freeRam));
@@ -80,9 +80,9 @@ void loop() {
 void BlinkLed() {
   digitalWrite(PC13, HIGH);
 
-  delay(100);
+  delay(1000);
 
   digitalWrite(PC13, LOW);
 
-  delay(100);                       // wait for a second
+  delay(1000);                       // wait for a second
 }

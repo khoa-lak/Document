@@ -2,7 +2,7 @@
 #define PIN_CONFIG_h
 #include <Arduino.h>
 
-#define Led PC13
+#define Led PD2
 
 class CLASS_CONFIG {
   public:

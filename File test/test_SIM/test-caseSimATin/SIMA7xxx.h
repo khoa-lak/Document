@@ -10,7 +10,7 @@ class CLASS_SIMA7xxx {
     char* c_setting ;
     char c_meanow[500] = {};
     bool (CLASS_SIMA7xxx::*Func_RunningConnect)();
-    bool Func_SerialSim(char* AT, char* ATCheck);
+    bool Func_SerialSim(char* AT, char* ATCheck, uint8_t type);
     bool Func_ConnectSim();
     bool Func_ConnectMQTT();
     bool Func_DisConnectMQTT();
@@ -30,12 +30,12 @@ class CLASS_SIMA7xxx {
     float f_currentTime = 99999.0;
     uint32_t ui32_basetime = 0;
     uint8_t ui8_commandRun = 0;
-    char *c_host = "tcp://mqtt.iotoom.com:1883";
+    char *c_host = "tcp://mqtt.iotoom.com:8883";
     char *c_user = "lab";
     char *c_pass = "IotoomVN";
-    char *c_deviceID          = "pwq-b9002e2048fe44e594c51535bf93d770";
-    char *c_topicDeviceID     = "devices/pwq-b9002e2048fe44e594c51535bf93d770";
-    char *c_topicPond      = "ponds/pond-d7fd097fc29c49058067a909abdf4999";
+    char *c_deviceID          = "abc";
+    char *c_topicDeviceID     = "devices/tintest";
+    char *c_topicPond      = "ponds/abc";
     char *c_mesLost       = "disconnected";
     char *c_mesConnect    = "connected";
     char *c_mesRun        = "running";

@@ -9,11 +9,8 @@ void setup() {
 }
 
 void loop() {
-  uint16_t tim = 3 * 60000;
-  if (millis() - ui32_delayProgram > tim) {
-    funcMain.Running();
-    BlinkLed();
-  }
+  funcMain.Running();
+  BlinkLed();
 }
 void BlinkLed() {
   uint8_t ui8_state = digitalRead(Led);

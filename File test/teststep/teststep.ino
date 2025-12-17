@@ -14,12 +14,16 @@ unsigned long currentMicros, Micros;
 #define pulsepump1    PA6
 #define pulsepump2    PA7
 
+#define enstp         PD2
+#define cw            PB3
+#define ccw           PB4
 //#define dir2    PA0
 //#define pulse2  PA1
 String inputString = "";
 char boolRun;
 uint8_t stp = 1000;
 uint16_t stp2 = 240;
+uint32_t interval = millis() + 3 * 60000;
 void setup() {
   pinMode(enpump,    OUTPUT);
   pinMode(dirpump,    OUTPUT);
@@ -29,6 +33,12 @@ void setup() {
   digitalWrite(dirpump, 0);
   digitalWrite(pulsepump1, 0);
   digitalWrite(pulsepump2, 0);
+  pinMode(enstp,    OUTPUT);
+  pinMode(cw,    OUTPUT);
+  pinMode(ccw,    OUTPUT);
+  digitalWrite(enstp, 0);
+  digitalWrite(cw, 0);
+  digitalWrite(ccw, 0);
   //  pinMode(d2,    INPUT_PULLUP);
   //  pinMode(u2,    INPUT_PULLUP);
   //  pinMode(en1,    OUTPUT);
@@ -101,29 +111,60 @@ void loop() {
     funcPump2(1);
     inputString = "";
   }
+  else if (inputString.indexOf("step") >= 0) {
+    uint8_t dir = inputString.charAt(4) - '0';
+    if (millis() - interval > 1 * 60000) {
+      testStep(dir);
+      Serial.println("=============");
+      interval = millis();
+    }
+
+    //inputString = "";
+  }
+
+
+}
+void testStep(uint8_t dir) {
+  uint16_t spe = 1000;
+  uint8_t dirStp;
+  if (dir)
+    dirStp = cw;
+  else
+    dirStp = ccw;
+  digitalWrite(enstp, 1);
+  for (int i = 0 ; i < 15000 ; i++) {
+    digitalWrite(ccw, 0);
+    delayMicroseconds(spe);
+    digitalWrite(ccw, 1);
+    delayMicroseconds(spe);
+    if (spe > 150) {
+      spe -= 1;
+    }
+  }
+  digitalWrite(enstp, 0);
 }
 void funcPump1(uint8_t dir) {
   uint16_t spe = 200;
   digitalWrite(dirpump, dir);
-  digitalWrite(enpump, 1); 
-    for (int i = 0 ; i < 2000 ; i++) {
-      digitalWrite(pulsepump1, 0);
-      delayMicroseconds(spe);
-      digitalWrite(pulsepump1, 1);
-      delayMicroseconds(spe);
-    }
+  digitalWrite(enpump, 1);
+  for (int i = 0 ; i < 2000 ; i++) {
+    digitalWrite(pulsepump1, 0);
+    delayMicroseconds(spe);
+    digitalWrite(pulsepump1, 1);
+    delayMicroseconds(spe);
+  }
   digitalWrite(enpump, 0);
 }
 void funcPump2(uint8_t dir) {
   uint16_t spe = 200;
   digitalWrite(dirpump, dir);
   digitalWrite(enpump, 1);
-    for (int i = 0 ; i < 2000 ; i++) {
-      digitalWrite(pulsepump2, 0);
-      delayMicroseconds(spe);
-      digitalWrite(pulsepump2, 1);
-      delayMicroseconds(spe);
-    }
+  for (int i = 0 ; i < 2000 ; i++) {
+    digitalWrite(pulsepump2, 0);
+    delayMicroseconds(spe);
+    digitalWrite(pulsepump2, 1);
+    delayMicroseconds(spe);
+  }
   digitalWrite(enpump, 0);
 }
 //void funcStepRotate(uint8_t dir) {

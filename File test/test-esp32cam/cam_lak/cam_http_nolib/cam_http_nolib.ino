@@ -2,19 +2,20 @@
 #include "esp_camera.h"
 
 // Thông tin WiFi
-const char* ssid = "Huong Long Hai";
-const char* password = "khongnhonua";
+const char* ssid = "IoTOOMVN";
+const char* password = "IoTOOMVN";
 
 // Thông tin MQTT broker
 const char* mqttServer = "mqtt.iotoom.com"; // Ví dụ: "broker.hivemq.com"
 const int mqttPort = 1883;
 const char* mqttTopic = "devices/esp32cam/video";
+//const char* mqttTopic = "TEST_CAM_VIDEO";
 const char* clientId = "esp32cam";
 const char* mqttUser = "lab";
 const char* mqttPass = "IotoomVN";
 // Chọn kiểu mã hóa (0: Binary, 1: Hex, 2: Base64)
 #define ENCODING_TYPE 0 // Thay đổi giá trị này để chọn: 0, 1, hoặc 2
-#define FRAME_RATE_MS 30 // 10 FPS (100ms/frame)
+#define FRAME_RATE_MS 1000 // 10 FPS (100ms/frame)
 #define VIDEO_DURATION_MS 20000 // 20 giây gửi video
 #define REST_DURATION_MS 10000 // 10 giây nghỉ
 #define FLASH_PIN 4 // GPIO 4 cho flash trên ESP32-CAM
