@@ -1,0 +1,6 @@
+Tên Vùng,	Địa chỉ bắt đầu,	Độ lớn,		Chức năng
+Bootloader,	0x08000000,		32 KB,		Quản lý update và khôi phục.
+Active App,	0x08008000,		128 KB,		App chính đang chạy.
+Factory App,	0x08028000,		128 KB,		App gốc (Backup). Chỉ đọc.
+Storage,	0x08048000,		128 KB,		Nơi chứa file tải về tạm thời.
+Config Flag,	0x0807F800,		2 KB,		Lưu cờ báo hiệu Update.
